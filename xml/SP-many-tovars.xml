@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="SP-many-tovars.xsl" ?>
+<allsp>
+	<sp>
+		<name>Домашние хлопоты</name>
+		<date>12.12.2012</date>
+		<goods>Ложка керамическая</goods>
+		<num>50</num>
+		<price>230</price>
+	</sp>
+	<sp>
+		<name>Трусики по 50 р</name>
+		<date>10.10.2014</date>
+		<goods>Трусы Apple</goods>
+		<num>2</num>
+		<price>100</price>
+	</sp>
+	<sp>
+		<name>Домашние хлопоты</name>
+		<date>12.12.2012</date>
+		<goods>Ложка керамическая</goods>
+		<num>50</num>
+		<price>230</price>
+	</sp>
+	<sp>
+		<name>Уют в доме</name>
+		<date>15.09.2014</date>
+		<goods>Мешок для стирки</goods>
+		<num>1</num>
+		<price>60</price>
+	</sp>
+		<sp>
+		<name>Трусики по 50 р</name>
+		<date>14.10.2014</date>
+		<goods>Трусы КК</goods>
+		<num>5</num>
+		<price>250</price>
+	</sp>
+	<sp>
+		<name>Домашние хлопоты</name>
+		<date>12.11.2012</date>
+		<goods>Мыльница Ракушка</goods>
+		<num>2</num>
+		<price>230</price>
+	</sp>
+	<sp>
+		<name>Трусики по 50 р</name>
+		<date>12.11.2012</date>
+		<goods>Трусы в горошек</goods>
+		<num>2</num>
+		<price>100</price>
+	</sp>
+	<sp>
+		<name>Домашние хлопоты</name>
+		<date>12.12.2012</date>
+		<goods>Ложка керамическая</goods>
+		<num>50</num>
+		<price>230</price>
+	</sp>
+	<sp>
+		<name>Уют в доме</name>
+		<date>15.10.2012</date>
+		<goods>Пылесос моющий Philips</goods>
+		<num>1</num>
+		<price>2330</price>
+	</sp>
+	<sp>
+		<name>Индокитай</name>
+		<date>16.01.2013</date>
+		<goods>Аромамасло "Сандал"</goods>
+		<num>2</num>
+		<price>155</price>
+	</sp>
+	<sp>
+		<name>Домашние хлопоты</name>
+		<date>12.12.2012</date>
+		<goods>Ложка керамическая</goods>
+		<num>50</num>
+		<price>230</price>
+	</sp>
+</allsp>

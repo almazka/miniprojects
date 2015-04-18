@@ -1,0 +1,114 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana;
+	font-size: 13px;
+	color:#353535;
+}
+
+img {border:0;}
+
+a img {
+	border-width: 0px;
+	border-style: none;
+}
+
+body {
+	min-height: 100%;
+	min-width: 950px;
+	display:block;
+	background: url(fone.jpg);
+}
+article {
+	width: 960px;
+	margin: 0 auto;
+	background: url(pixfone.png);
+	padding: 7px 20px 20px;
+}
+.buttons {
+	float: left;
+	width: 158px;
+	margin-left: 10px;
+}
+.analiz {
+	display: none;
+}
+#include {
+	height: 214px;
+	width: 500px;
+	float: left;
+}
+.our_people {
+	margin-top: 30px;
+}
+.our_people {
+	display: none;
+}
+.table-right-sp {
+	display: none;
+}
+.table-right-sp table {
+	border-collapse: collapse;
+}
+.table-right-sp th {
+    background-color: rgb(77, 143, 56);
+    color: #fffff0;
+   }
+.table-right-sp td, .table-right-sp th {
+    padding: 3px;
+   }
+.action {
+	font-weight: bold;
+	color: red;
+}
+#viewbody {
+	margin-top: 10px;
+}
+h1 {
+	font: bold 24px Verdana;
+}
+.new_people {
+	width: 265px;
+	float: right;
+}
+.people_code {
+	margin-top: 30px;
+	width: 600px;
+	display: none;
+}
+.clear {
+	display: block;
+	clear: both;
+}
+.work_buttons {
+	display: none;
+}
+.var-work li {
+	list-style: none;
+}
+.sub_button {
+	display: inline-block;
+	border: 1px solid #F1DA41;
+	border-radius: 6px;
+	margin-bottom: 4px;
+	text-align: center;
+	font: bold 15px Verdana;
+	padding: 6px;
+	background: #fefcea;
+	background: -moz-linear-gradient(-45deg, #fefcea 0%, #f1da36 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fefcea), color-stop(100%,#f1da36));
+	background: -webkit-linear-gradient(-45deg, #fefcea 0%,#f1da36 100%);
+	background: -o-linear-gradient(-45deg, #fefcea 0%,#f1da36 100%);
+	background: -ms-linear-gradient(-45deg, #fefcea 0%,#f1da36 100%);
+	background: linear-gradient(135deg, #fefcea 0%,#f1da36 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 );
+	cursor: pointer;
+}
+.ins {
+	float: left;
+}
+header, footer, nav, article, section {
+	display: block; 
+	position: relative;
+	overflow: hidden;
+}

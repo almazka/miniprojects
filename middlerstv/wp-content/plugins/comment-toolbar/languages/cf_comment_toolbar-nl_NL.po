@@ -1,0 +1,176 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Comment Toolbar v1.3.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-25 12:50+0100\n"
+"PO-Revision-Date: 2010-10-25 12:58+0100\n"
+"Last-Translator: Cristiano Fino <cristiano.fino@bbs.olografix.org>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;__ngettext_noop:1,2;_c\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../cf_comment_toolbar.php:35
+msgid "Reply"
+msgstr "Antwoord"
+
+#: ../cf_comment_toolbar.php:36
+msgid "Quote"
+msgstr "Citeren"
+
+#: ../cf_comment_toolbar.php:37
+msgid "wrote"
+msgstr "schreef"
+
+#: ../cf_comment_toolbar.php:144
+msgid "Options saved."
+msgstr "Opties opgeslagen."
+
+#: ../cf_comment_toolbar.php:149
+msgid "Comment Toolbar Plugin Options"
+msgstr "Commentaar Plugin Toolbar Opties"
+
+#: ../cf_comment_toolbar.php:157
+msgid "<p>If you love this plugin, please consider <b>make a donation</b>, clicking the button to right. In this way you can keeping development, support and a better documentation for <b>Comment Toolbar</b>.</p><p>Or, at least, post a <a href=\"http://www.cristianofino.net/post/Comment-Toolbar-Plugin-per-WordPress.aspx\" target=\"_blank\">link to Comment Toolbar</a> on your site.</p><p><b>Your contribution will be very appreciated !</b></p>"
+msgstr "<p>If you love this plugin, please consider <b>make a donation</b>, clicking the button to right. In this way you can keeping development, support and a better documentation for <b>Comment Toolbar</b>.</p><p>Or, at least, post a <a href=\"http://www.cristianofino.net/post/Comment-Toolbar-Plugin-per-WordPress.aspx\" target=\"_blank\">link to Comment Toolbar</a> on your site.</p><p><b>Your contribution will be very appreciated !</b></p>"
+
+#: ../cf_comment_toolbar.php:173
+msgid "Label of 'Reply' button (or link):"
+msgstr "Etiket van 'Antwoorden' knop (of link):"
+
+#: ../cf_comment_toolbar.php:177
+#: ../cf_comment_toolbar.php:186
+msgid "(to not display, leave blank)"
+msgstr "(om niet weer te geven, leeg laten)"
+
+#: ../cf_comment_toolbar.php:182
+msgid "Label of 'Quote' button (or link):"
+msgstr "Etiket van 'Citeer' knop (of link):"
+
+#: ../cf_comment_toolbar.php:191
+msgid "Text message of 'Quote' action:"
+msgstr "Tekst bericht van 'Citeer' actie:"
+
+#: ../cf_comment_toolbar.php:199
+msgid "Characters of separation between the buttons (or links):"
+msgstr "Tekens van de scheiding tussen de knoppen (of links):"
+
+#: ../cf_comment_toolbar.php:203
+msgid "(you can insert HTML code also)"
+msgstr "(u kunt ook HTML-code invoegen)"
+
+#: ../cf_comment_toolbar.php:208
+msgid "Enclose commentator's name in html tag &lt;b&gt;...&lt;/b&gt; :"
+msgstr "Omsluiten reageerder's naam in html-tag &lt;b&gt;...&lt;/b&gt; :"
+
+#: ../cf_comment_toolbar.php:212
+#: ../cf_comment_toolbar.php:223
+#: ../cf_comment_toolbar.php:280
+#: ../cf_comment_toolbar.php:292
+msgid "No"
+msgstr "Nee"
+
+#: ../cf_comment_toolbar.php:213
+#: ../cf_comment_toolbar.php:224
+#: ../cf_comment_toolbar.php:281
+#: ../cf_comment_toolbar.php:293
+msgid "Yes"
+msgstr "Ja"
+
+#: ../cf_comment_toolbar.php:219
+msgid "Add a link to his commentary on the name of the commentator :"
+msgstr "Add a link to his commentary on the name of the commentator :"
+
+#: ../cf_comment_toolbar.php:230
+msgid "Text to insert in anchor link, before comment ID :"
+msgstr "Tekst in te voegen in de anker koppeling, voor commentaar ID:"
+
+#: ../cf_comment_toolbar.php:234
+msgid "(Insert <b>co_</b> if you do not know the format's links to comments of your theme)"
+msgstr "(Plaats <b>co_</b> als je het formaat niet weet van de links naar de reacties in uw thema)"
+
+#: ../cf_comment_toolbar.php:239
+msgid "Toolbar style:"
+msgstr "Toolbar stijl:"
+
+#: ../cf_comment_toolbar.php:243
+msgid "Buttons"
+msgstr "Knoppen"
+
+#: ../cf_comment_toolbar.php:244
+msgid "Links"
+msgstr "Links"
+
+#: ../cf_comment_toolbar.php:245
+msgid "Images"
+msgstr "Images"
+
+#: ../cf_comment_toolbar.php:247
+msgid "To customize the graphic appearance of image buttons, replace files 'first.png','previous.png', 'next.png', 'last.png', 'reply.png','quote.png', in the plugin's <b>images</b> folder using the same names for files"
+msgstr "To customize the graphic appearance of image buttons, replace files 'first.png','previous.png', 'next.png', 'last.png', 'reply.png','quote.png', in the plugin's <b>images</b> folder using the same names for files"
+
+#: ../cf_comment_toolbar.php:252
+msgid "Toolbar position:"
+msgstr "Toolbar positie:"
+
+#: ../cf_comment_toolbar.php:256
+msgid "Top of comment"
+msgstr "Boven Reactie"
+
+#: ../cf_comment_toolbar.php:257
+msgid "Bottom of comment"
+msgstr "Onder Reactie"
+
+#: ../cf_comment_toolbar.php:263
+msgid "Toolbar alignment:"
+msgstr "Toolbar uitlijning:"
+
+#: ../cf_comment_toolbar.php:267
+msgid "Left"
+msgstr "Links"
+
+#: ../cf_comment_toolbar.php:268
+msgid "Right"
+msgstr "Rechts"
+
+#: ../cf_comment_toolbar.php:269
+msgid "Center"
+msgstr "Centreer"
+
+#: ../cf_comment_toolbar.php:270
+msgid "CSS style settings"
+msgstr "CSS stijlinstellingen"
+
+#: ../cf_comment_toolbar.php:276
+msgid "Show buttons to navigate on your comments :"
+msgstr "Toon knoppen om te navigeren op uw reacties:"
+
+#: ../cf_comment_toolbar.php:283
+#: ../cf_comment_toolbar.php:295
+msgid "This feature is automatically disabled when using the paging of the comments"
+msgstr "This feature is automatically disabled when using the paging of the comments"
+
+#: ../cf_comment_toolbar.php:288
+msgid "Enable smooth scrolling :"
+msgstr "Schakel vloeiend schuiven aan:"
+
+#: ../cf_comment_toolbar.php:300
+msgid "Update Options"
+msgstr "Update Opties"
+
+#: ../cf_comment_toolbar.php:323
+msgid "WARNING! Add \"ID='{0}'\" into the field <textarea name='comment' ...></textarea> in the file 'comment.php' of your theme."
+msgstr ""
+
+#: ../cf_comment_toolbar.php:359
+#: ../cf_comment_toolbar.php:395
+msgid "Go to comment of this author"
+msgstr "Go to comment of this author"
+

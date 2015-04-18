@@ -1,0 +1,56 @@
+********************************
+***** Typical construction *****
+********************************
+
+********************************
+****** Спрайты одинаковые ******
+********************************
+i {
+display: block;
+cursor: pointer;
+height: 30px;
+width: 35px;
+}
+&:nth-of-type(1) i {
+	@extend .sprite-phone;
+}
+&:nth-of-type(2) i {
+	@extend .sprite-place;
+}
+&:nth-of-type(3) i {
+	@extend .sprite-mail;
+}
+
+********************************
+******** Спрайты разные ********
+********************************
+
+div {
+	position: relative;
+	i {
+		display: block;
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+
+********************************
+**** Вложеные дивы с лефтом ****
+********************************
+Сниппет divs
+
+.lol {
+	& div[class^="lol"]:nth-of-type(1) {
+		float: left;
+	}
+	& div[class^="lol"]:nth-of-type(2) {
+		float: right;
+	}
+}
+
+

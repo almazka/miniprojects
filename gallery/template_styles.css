@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana;
+	font-size: 13px;
+	color:#353535;
+}
+
+img {border:0;}
+
+body {
+	min-height: 100%;
+	min-width: 950px;
+	display:block;
+}
+
+header, footer, nav, article, section {display: block; position: relative;}
+
+a img {
+	border-width: 0px;
+	border-style: none;
+}
+
+li {
+	float: left;
+	margin: 5px;
+	width: 200px;
+	height: 150px;
+	text-align: center;
+}
+
+ul {
+	width: 990px;
+}

@@ -1,0 +1,347 @@
+body {
+	background: url(http://omnomlife.hol.es/wp-content/uploads/2013/11/body-bg-.png);
+}
+
+.slider_line {
+	width: 770px !important;
+	margin: 0px auto;
+}
+.sli-links {
+	display: none;
+}
+.slide {
+	position: absolute;
+	display: block;
+	top: 0;
+	width: 770px;
+}
+.b-carousel-block {
+	float: left;
+	width: 153px;
+	padding-top: 5px;
+	position: relative;
+}
+.a-carousel-image-link {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+.title_new {
+	text-align: center;
+}
+.a-carousel-image-link img {
+	width: 110px;
+	border-radius: 30px 10px;
+	box-shadow: 1px 0px 10px rgba(0,0,0,.5);
+	-webkit-box-shadow: 1px 0px 10px rgba(0,0,0,.5);
+	padding: 2px;
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #e8e4e3;
+	background: #fff;
+	margin: 0 auto 10px;
+}
+.a-carousel-image-link > i {
+	color: #000;
+	font: 9px Arial;
+}
+.corners:before {
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-right: 0px solid transparent;
+	border-left: 10px solid transparent;
+	border-bottom: 8px solid #8B0000;
+	position: absolute;
+	z-index: 1;
+	top: 81px;
+	left: 11px;
+}
+span.tag {
+	display: block;
+	padding: 4px;
+	font: bold 11px Verdana;
+	top: 90px;
+	position: absolute;
+	left: 12px;
+	background: #c82201;
+	background: -moz-linear-gradient(left, #c82201 0%, #b41f01 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#c82201), color-stop(100%,#b41f01));
+	background: -webkit-linear-gradient(left, #c82201 0%,#b41f01 100%);
+	background: -o-linear-gradient(left, #c82201 0%,#b41f01 100%);
+	background: -ms-linear-gradient(left, #c82201 0%,#b41f01 100%);
+	background: linear-gradient(to right, #c82201 0%,#b41f01 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c82201', endColorstr='#b41f01',GradientType=1 );
+	z-index: 2;
+	text-shadow: 1px 1px 1px #131212;
+	color: #ede7c2;
+	border-right: 2px solid #F78989;
+	box-shadow: 0px 0px 0px 1px #FFA3A3;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.a-carousel-image-link h3 {
+	font: italic bold 12px Verdana;
+	color: #B10303;
+	text-align: left;
+	padding: 2px 6px 0 10px;
+	margin-bottom: 0px;
+	text-shadow: 1px 1px 1px #FFFFFF;
+}
+
+#slides {
+	position: relative;
+}
+.slides_container {
+	height: 189px;
+	overflow: hidden;
+	position: relative;
+}
+.slide,.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}
+
+@-webkit-keyframes fadeInLeftBig {
+	0% {
+		-webkit-transform: translateX(-770px);
+	}	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+@-moz-keyframes fadeInLeftBig {
+	0% {
+		-moz-transform: translateX(-770px);
+	}
+	
+	100% {
+		-moz-transform: translateX(0);
+	}
+}
+@-o-keyframes fadeInLeftBig {
+	0% {
+		-o-transform: translateX(-770px);
+	}
+	
+	100% {
+		-o-transform: translateX(0);
+	}
+}
+@keyframes fadeInLeftBig {
+	0% {
+		transform: translateX(-770px);
+	}
+	
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.fadeInLeftBig {
+	-webkit-animation-name: fadeInLeftBig;
+	-moz-animation-name: fadeInLeftBig;
+	-o-animation-name: fadeInLeftBig;
+	animation-name: fadeInLeftBig;
+	z-index: 1000;
+}
+@-webkit-keyframes fadeInRightBig {
+	0% {
+		-webkit-transform: translateX(770px);
+	}
+	
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes fadeInRightBig {
+	0% {
+		-moz-transform: translateX(770px);
+	}
+	
+	100% {
+		-moz-transform: translateX(0);
+	}
+}
+
+@-o-keyframes fadeInRightBig {
+	0% {
+		-o-transform: translateX(770px);
+	}
+	
+	100% {
+		-o-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRightBig {
+	0% {
+		transform: translateX(770px);
+	}
+	
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.fadeInRightBig {
+	-webkit-animation-name: fadeInRightBig;
+	-moz-animation-name: fadeInRightBig;
+	-o-animation-name: fadeInRightBig;
+	animation-name: fadeInRightBig;
+	z-index: 1000;
+}
+@-webkit-keyframes fadeOutLeftBig {
+	0% {
+		-webkit-transform: translateX(0);
+	}
+	
+	100% {
+		-webkit-transform: translateX(-770px);
+	}
+}
+
+@-moz-keyframes fadeOutLeftBig {
+	0% {
+		-moz-transform: translateX(0);
+	}
+	
+	100% {
+		-moz-transform: translateX(-770px);
+	}
+}
+
+@-o-keyframes fadeOutLeftBig {
+	0% {
+		-o-transform: translateX(0);
+	}
+	
+	100% {
+		-o-transform: translateX(-770px);
+	}
+}
+
+@keyframes fadeOutLeftBig {
+	0% {
+		transform: translateX(0);
+	}
+	
+	100% {
+		transform: translateX(-770px);
+		display: none;
+	}
+}
+
+.fadeOutLeftBig {
+	-webkit-animation-name: fadeOutLeftBig;
+	-moz-animation-name: fadeOutLeftBig;
+	-o-animation-name: fadeOutLeftBig;
+	animation-name: fadeOutLeftBig;
+}
+@-webkit-keyframes fadeOutRightBig {
+	0% {
+		-webkit-transform: translateX(0);
+	}
+	
+	100% {
+		-webkit-transform: translateX(770px);
+	}
+}
+@-moz-keyframes fadeOutRightBig {
+	0% {
+		-moz-transform: translateX(0);
+	}
+	
+	100% {
+		-moz-transform: translateX(770px);
+	}
+}
+@-o-keyframes fadeOutRightBig {
+	0% {
+		-o-transform: translateX(0);
+	}
+	
+	100% {
+		-o-transform: translateX(770px);
+	}
+}
+@keyframes fadeOutRightBig {
+	0% {
+		transform: translateX(0);
+	}
+	
+	100% {
+		transform: translateX(770px);
+	}
+}
+
+.fadeOutRightBig {
+	-webkit-animation-name: fadeOutRightBig;
+	-moz-animation-name: fadeOutRightBig;
+	-o-animation-name: fadeOutRightBig;
+	animation-name: fadeOutRightBig;
+}
+
+@-webkit-keyframes fadePrice {
+	0% {background: #fff;}	
+	50% {background: #f0e75a;}
+	100% {background: #fff;}
+}
+
+@-moz-keyframes fadePrice {
+	0% {background: #fff;}	
+	50% {background: #f0e75a;}
+	100% {background: #fff;}
+}
+
+@-o-keyframes fadePrice {
+	0% {background: #fff;}	
+	50% {background: #f0e75a;}
+	100% {background: #fff;}
+}
+
+@keyframes fadePrice {
+	0% {background: #fff;}	
+	50% {background: #f0e75a;}
+	100% {background: #fff;}
+}
+.prev, .next {
+	display: block;
+	position: absolute;
+	top: 20%;
+	overflow: hidden;
+	text-indent: -999px;
+	outline: none !important;
+	z-index: 1000;
+}
+.prev, .next {
+	width: 23px;
+	height: 35px;
+}
+.prev {
+	background: url(http://omnomlife.hol.es/wp-content/themes/mystile/images/left-arrow.png) no-repeat;
+	left: -30px;
+}
+.next {
+	background: url(http://omnomlife.hol.es/wp-content/themes/mystile/images/right-arrow.png) no-repeat;
+	right: -34px;
+}
+.sli-links {
+	margin: 0 auto;
+	padding: 2px 0 11px 14px;
+	width: 100px;
+}
+.sli-links span {
+	display: inline-block;
+	margin-right: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: #000;
+	border: 1px solid;
+	font-size: 0px;
+}
+.sli-links span.active {
+	background-color: #ee673e;
+	border: 1px solid #b15b4d;
+}

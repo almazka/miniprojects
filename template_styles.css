@@ -1,0 +1,45 @@
+.catalogs {
+		text-align: left;
+		margin-left: 20px;
+}
+.codered {
+		color: red;
+}
+body {
+	background: url(img/opasity60.jpg) fixed no-repeat;
+	background-position: 100% 50%;
+}
+.radiolive {
+}
+.number_of_eat {
+	float: left;
+	margin-top: 4px;
+}
+.number_of_eat input {
+	border-radius: 7px;
+	border: 1px solid #B152C4;
+	padding: 6px;
+	text-align: right;
+	width: 47px;
+	margin: 0 5px 0 6px;
+}
+.graybutton {
+	border-radius: 12px;
+	padding: 4px 9px 6px 9px;
+	border: 2px solid #444444;
+}
+.formferment {
+
+}
+.table_ferment {
+	border-collapse: collapse;
+}
+.table_ferment td, .table_ferment th {
+	border: 3px groove #ccc;
+}
+.view_days hr {
+	border: 1px dotted #ccc;
+}
+.view_days h2 {
+	margin-bottom: 0;
+}

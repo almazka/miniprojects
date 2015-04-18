@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="forum-recursion-back.xsl" ?>
+<ul>
+	<li id="1">
+		<h3>
+			<span>Вася Пупкин</span> пишет: </h3>
+		<p>Привет всем!</p>
+		<ul>
+			<li id="2">
+				<h3>
+					<span>Федя Сумкин</span> пишет: </h3>
+				<p>Ну привет</p>
+				<ul>
+					<li id="3">
+						<h3>
+							<span>Лолита Скаковская</span> пишет: </h3>
+						<p>Не ну привет, а привет!!!</p>
+						<ul>
+							<li id="4">
+								<h3>
+									<span>Шура Крикунов</span> пишет: </h3>
+								<p>Может, у него настроение плохое</p>
+							</li>
+						</ul>
+					</li>
+					<li id="5">
+						<h3>
+							<span>Дарья Петрова</span> пишет: </h3>
+						<p>А что так не весело?</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<timeTable
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xml-example-schema-pro.xsd">
+
+	<lesson no="1">
+		<date>2015-07-06</date>
+		<time>14:55:40</time>
+	</lesson>
+	<lesson no="2">
+		<date>2015-07-10</date>
+		<time>14:25:00</time>
+	</lesson>
+	<lesson no="3">
+		<date>2015-07-10</date>
+		<time>14:25:00</time>
+	</lesson>
+	
+	<offices>
+		<office code="БЛ">
+			<name>Комплекс 10</name>
+			<address>Ключевского, 5</address>
+		</office>
+		<office code="КЕ">
+			<name>Комплекс 45</name>
+			<address>Мостовая, 44</address>
+		</office>
+	</offices>
+</timeTable>

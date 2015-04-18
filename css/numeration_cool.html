@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Сложная нумерация</title>
+<style type="text/css">
+#ul{
+ counter-reset:buratino 5;
+}
+
+#ul div{
+ margin: 0 0 0 40px
+}
+#ul div:before{
+  counter-increment: buratino 5;
+  content: counter(buratino, upper-roman) ". ";
+  counter-reset:malvina;
+}
+#ul span:before{
+ counter-increment: malvina;
+ content: counter(buratino, upper-roman) "." counter(malvina, lower-roman) ". ";
+}
+
+
+#ul span{
+ display: block;
+ margin: 0 0 0 20px
+}
+
+ol{
+ list-style: none;
+ counter-reset: piero;
+}
+ol li:before{
+	counter-increment: piero;
+	content:counters(piero, ".",decimal) ". ";
+}
+</style>
+</head>
+<body>  
+  <div id="ul">
+	<div>Глава 
+		<span>Раздел</span>
+		<span>Раздел</span>
+	</div>
+	<div>Глава 
+		<span>Раздел</span>
+		<span>Раздел</span>
+		<span>Раздел</span>
+		<span>Раздел</span>
+	</div>
+  </div> 
+  <ol>
+	<li>Глава 
+		<ol>
+		<li>Раздел
+			<ol>
+			<li>Параграф</li>
+			<li>Параграф</li>
+			</ol>
+		</li>
+		<li>Раздел</li>
+		</ol>
+	</li>
+	<li>Глава 
+		<ol>
+		<li>Раздел
+			<ol>
+			<li>Параграф</li>
+			<li>Параграф</li>
+			</ol>
+		</li>
+		</ol>
+	</li>
+  </ol>
+</body>
+</html>

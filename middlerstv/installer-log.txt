@@ -1,0 +1,158 @@
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP1 START @ 07:40:22
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+VERSION:	0.5.8
+PHP:		5.5.15 | SAPI: apache2handler
+SERVER:		Apache/2.4.10 (Win64)
+DOC ROOT:	E:/Apache24/htdocs/middlerstv
+DOC ROOT 755:	true
+LOG FILE 644:	true
+BUILD NAME:	20141017_middlerstv_544134a7660d54036141017152423
+REQUEST URL:	http://localhost/middlerstv/installer.php
+
+********************************************************************************
+ARCHIVE SETUP
+********************************************************************************
+NAME:	20141017_middlerstv_544134a7660d54036141017152423_archive.zip
+SIZE:	75.76MB
+ZIP:	Enabled (ZipArchive Support)
+EXTRACTING
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 0
+    [filename] => 
+    [comment] => 
+)
+COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to .orig
+- Reset of .htaccess/web.config files
+
+UPDATED FILES:
+- SQL FILE:  'E:/Apache24/htdocs/middlerstv/installer-data.sql'
+- WP-CONFIG: 'E:/Apache24/htdocs/middlerstv/wp-config.php'
+
+ARCHIVE RUNTIME: 40.2873 sec.
+
+
+********************************************************************************
+DATABASE-ROUTINES
+********************************************************************************
+--------------------------------------
+SERVER ENVIROMENT
+--------------------------------------
+MYSQL VERSION:	5.5.23
+TIMEOUT:	5000
+MAXPACK:	1048576
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+DROP TABLE:	
+QUERIES RAN:	7235
+
+wp_cfs_sessions: (2)
+wp_cfs_values: (0)
+wp_commentmeta: (28)
+wp_comments: (66)
+wp_duplicator_packages: (1)
+wp_forum_forums: (0)
+wp_forum_groups: (0)
+wp_forum_posts: (0)
+wp_forum_threads: (0)
+wp_forum_usergroup2user: (0)
+wp_forum_usergroups: (0)
+wp_likebtn_item: (0)
+wp_links: (0)
+wp_options: (435)
+wp_pollsa: (3)
+wp_pollsip: (2)
+wp_pollsq: (1)
+wp_postmeta: (5797)
+wp_posts: (496)
+wp_term_relationships: (70)
+wp_term_taxonomy: (10)
+wp_terms: (10)
+wp_ulike: (42)
+wp_usermeta: (230)
+wp_users: (15)
+Removed '66' cache/transient rows
+
+SECTION RUNTIME: 3.8272 sec.
+
+********************************************************************************
+STEP1 COMPLETE @ 07:41:06 - TOTAL RUNTIME: 44.1434 sec.
+********************************************************************************
+
+
+
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP2 START @ 07:42:02
+NOTICE: Do not post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	latin1
+CHARSET CLIENT:	 utf8 
+
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+wp_cfs_sessions~ (2)
+wp_cfs_values^ (0)
+wp_commentmeta~ (28)
+wp_comments~ (66)
+wp_duplicator_packages^ (0)
+wp_forum_forums^ (0)
+wp_forum_groups^ (0)
+wp_forum_posts^ (0)
+wp_forum_threads^ (0)
+wp_forum_usergroup2user^ (0)
+wp_forum_usergroups^ (0)
+wp_likebtn_item^ (0)
+wp_links^ (0)
+wp_options~ (367)
+wp_pollsa~ (3)
+wp_pollsip~ (2)
+wp_pollsq~ (1)
+wp_postmeta~ (5797)
+wp_posts~ (496)
+wp_term_relationships~ (70)
+wp_term_taxonomy~ (10)
+wp_terms~ (10)
+wp_ulike~ (42)
+wp_usermeta~ (230)
+wp_users~ (15)
+--------------------------------------
+SEARCH1:	'http://middlerstv.ru' 
+REPLACE1:	'http://localhost/middlerstv' 
+SEARCH2:	'/var/www/middlerstv.ru/' 
+REPLACE2:	'E:/Apache24/htdocs/middlerstv/' 
+SCANNED:	Tables:25 | Rows:7139 | Cells:38840 
+UPDATED:	Tables:1 | Rows:370 |Cells:504 
+ERRORS:		0 
+RUNTIME:	3.066600 sec
+
+********************************************************************************
+START FINAL CLEANUP: 07:42:05
+********************************************************************************
+UPDATE `wp_blogs` SET domain = 'localhost' WHERE domain = 'middlerstv.ru'
+
+--------------------------------------
+WARNINGS
+--------------------------------------
+No Warnings Found
+
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+created basic .htaccess file.  If using IIS web.config this process will need to be done manually.
+********************************************************************************
+STEP 2 COMPLETE @ 07:42:05 - TOTAL RUNTIME: 3.0858 sec.
+********************************************************************************

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="xpath.xsl" ?>
+
+<demo message="Мега документ">
+	<test message="hello, world"
+		xmlns="http://igor-borisov.ru/namespace1">123</test>	
+		
+<!-- Комментарий -->		
+
+	<test message="Привет, мир"
+		xmlns="http://igor-borisov.ru/namespace2">987</test>
+</demo>

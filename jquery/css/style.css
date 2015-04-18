@@ -1,0 +1,62 @@
+#box {
+	position: relative;
+	min-height: 30px;
+	font-family: 'Trebuchet MS';
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 20px;
+	padding: 20px;
+	width: 100px;
+	background: #F3FF44;
+}
+#box:before {
+	bottom: -5px;
+	left: 10px;
+	width: 20px;
+	height: 10px;
+	-webkit-transform: rotate(-30deg) skewX(-45deg);
+	-moz-transform: rotate(-30deg) skewX(-45deg);
+	-o-transform: rotate(-30deg) skewX(-45deg);
+	-ms-transform: rotate(-30deg) skewX(-45deg);
+	background: #F3FF44;
+	z-index: -1;
+	border: 1px solid #F3FF44;
+}
+#box:before, #box:after {
+	content: '';
+	position: absolute;
+}
+#box:after {
+	left: 13px;
+	bottom: -1px;
+	width: 15px;
+	height: 1px;
+	background: #F3FF44;
+}
+.button {
+	margin: 10px auto;
+	padding: 8px 16px;
+	border-top: 1px solid #fac585;
+	background: #f9b86f;
+	background: -moz-linear-gradient(top, #f9b86f 0%, #e2470c 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9b86f), color-stop(100%,#e2470c));
+	background: -webkit-linear-gradient(top, #f9b86f 0%,#e2470c 100%);
+	background: -o-linear-gradient(top, #f9b86f 0%,#e2470c 100%);
+	background: -ms-linear-gradient(top, #f9b86f 0%,#e2470c 100%);
+	background: linear-gradient(to bottom, #f9b86f 0%,#e2470c 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b86f', endColorstr='#e2470c',GradientType=0 );
+	cursor: pointer !important;
+	letter-spacing: 0.5px;
+	font: bold 11px Arial;
+	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
+	box-shadow: 0 5px 6px rgba(0,0,0,0.6);
+}
+.button[disabled='disabled'] {
+	background: #E2DEDE;
+	border-top: 1px solid #000000;
+}
+.leftpart, .rightpart {
+	float: left;
+}

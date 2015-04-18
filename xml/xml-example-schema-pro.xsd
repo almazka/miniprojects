@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:complexType name="lessonsType">
+	<xs:sequence>
+		<xs:element name="date" type="xs:date" />
+		<xs:element name="time" type="xs:time" />
+	</xs:sequence>
+<xs:attribute name="no" type="xs:ID" use="required" />
+</xs:complexType>
+<xs:complexType name="officesType">
+	<xs:sequence>
+		<xs:element name="name" type="xs:string" />
+		<xs:element name="address" type="xs:string" />
+	</xs:sequence>
+<xs:attribute name="code" type="xs:ID" use="required" />
+</xs:complexType>	
+<xs:complexType name="notesType">
+	<xs:sequence>
+		<xs:element name="lesson" type="lessonsType" minOccurs="0" maxOccurs="unbounded" />
+		<xs:element name="offices" type="officesType" minOccurs="0" maxOccurs="unbounded" />
+	</xs:sequence>
+</xs:complexType>	
+
+	<xs:element name="timeTable" type="notesType" />
+</xs:schema>

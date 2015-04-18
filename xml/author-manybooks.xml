@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="author-manybooks.xsl" ?>
+<pricelist>
+	<book>
+		<title>XML и IE5</title>
+		<author>Алекс Хоумер</author>
+		<price>200</price>
+	</book>
+	
+	<book>
+		<title>Dimanic HTML</title>
+		<author>Алекс Хоумер</author>
+		<price>120</price>
+	</book>
+	
+	<book>
+		<title>XSLT</title>
+		<author>Алекс Хоумер</author>
+		<price>150</price>
+	</book>
+
+	<book>
+		<title>XSLT</title>
+		<author>Александр Булев</author>
+		<price>170</price>
+	</book>
+
+	<book>
+		<title>Волшебное программирование</title>
+		<author>Александр Булев</author>
+		<price>200</price>
+	</book>
+
+	<book>
+		<title>Где живет Windows XP</title>
+		<author>Александр Булев</author>
+		<price>250</price>
+	</book>
+
+	<book>
+		<title>Windows XP</title>
+		<author>Сергей Трутнев</author>
+		<price>250</price>
+	</book>
+	
+	<book>
+		<title>Windows Script Host РґР»СЏ Windows 2000/XP</title>
+		<author>Сергей Трутнев</author>
+		<price>220</price>
+	</book>
+	
+	<book>
+		<title>Excel 2002 для идиотов</title>
+		<author>Александр Булев</author>
+		<price>260</price>
+	</book>
+	
+	<book>
+		<title>XML. Где собака порылась</title>
+		<author>Елена Руфова</author>
+		<price>100</price>
+	</book>
+
+	<book>
+		<title>Это вам не Windows 2000</title>
+		<author>Константин Корин</author>
+		<price>250</price>
+	</book>
+	
+	<book>
+		<title>Что такое WML</title>
+		<author>Сергей Трутнев</author>
+		<price>150</price>
+	</book>
+	
+</pricelist>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+	<book>
+		<author>Алекс Гомер</author>
+		<title>XML и IE5</title>
+		<pubyear>2000</pubyear>
+		<price>200</price>
+	</book>
+	<book>
+		<author>Алекс Хоумер</author>
+		<title>Dinamic HTML</title>
+		<pubyear>2004</pubyear>
+		<price>120</price>
+	</book>
+	<book>
+		<author>Василий Санин</author>
+		<title>Где взять мозги</title>
+		<pubyear>2005</pubyear>
+		<price>5000</price>
+	</book>
+	<book>
+		<author>Виталий Ломашов</author>
+		<title>Мое голодание</title>
+		<pubyear>2014</pubyear>
+		<price>300</price>
+	</book>
+	<book>
+		<author>Алиса Камер</author>
+		<title>Где твоя дверь</title>
+		<pubyear>2014</pubyear>
+		<price>200</price>
+	</book>
+	<book>
+		<author>Роман Колючин</author>
+		<title>Праздник</title>
+		<pubyear>1999</pubyear>
+		<price>400</price>
+	</book>
+</catalog>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="forum-recursion.xsl" ?>
+<items>
+	<item id="1" pid="0" author="Вася Пупкин">Привет всем!</item>
+	<item id="2" pid="1" author="Федя Сумкин">Ну привет</item>
+	<item id="3" pid="2" author="Лолита Скаковская">Не ну привет, а привет!!!</item>
+	<item id="4" pid="3" author="Шура Крикунов">Может, у него настроение плохое</item>
+	<item id="5" pid="2" author="Дарья Петрова">А что так не весело?</item>
+</items>

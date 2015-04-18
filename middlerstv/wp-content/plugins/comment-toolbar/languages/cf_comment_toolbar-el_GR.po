@@ -1,0 +1,172 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Comment Toolbar v.1.4.30\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-25 12:50+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Cristiano Fino <cristiano.fino@bbs.olografix.org>\n"
+"Language-Team: http://www.pare-dose.net/blog/\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Greek\n"
+"X-Poedit-Country: GREECE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../cf_comment_toolbar.php:35
+msgid "Reply"
+msgstr "Απάντηση"
+
+#: ../cf_comment_toolbar.php:36
+msgid "Quote"
+msgstr "Παράθεση"
+
+#: ../cf_comment_toolbar.php:37
+msgid "wrote"
+msgstr "έγραψε"
+
+#: ../cf_comment_toolbar.php:144
+msgid "Options saved."
+msgstr "Οι επιλογές αποθηκεύτηκαν."
+
+#: ../cf_comment_toolbar.php:149
+msgid "Comment Toolbar Plugin Options"
+msgstr "Επιλογές Comment Toolbar Plugin"
+
+#: ../cf_comment_toolbar.php:157
+msgid "<p>If you love this plugin, please consider <b>make a donation</b>, clicking the button to right. In this way you can keeping development, support and a better documentation for <b>Comment Toolbar</b>.</p><p>Or, at least, post a <a href=\"http://www.cristianofino.net/post/Comment-Toolbar-Plugin-per-WordPress.aspx\" target=\"_blank\">link to Comment Toolbar</a> on your site.</p><p><b>Your contribution will be very appreciated !</b></p>"
+msgstr "<p>If you love this plugin, please consider <b>make a donation</b>, clicking the button to right. In this way you can keeping development, support and a better documentation for <b>Comment Toolbar</b>.</p><p>Or, at least, post a <a href=\"http://www.cristianofino.net/post/Comment-Toolbar-Plugin-per-WordPress.aspx\" target=\"_blank\">link to Comment Toolbar</a> on your site.</p><p><b>Your contribution will be very appreciated !</b></p>"
+
+#: ../cf_comment_toolbar.php:173
+msgid "Label of 'Reply' button (or link):"
+msgstr "Επιγραφή του πλήκτρου (ή συνδέσμου) «Απάντηση»:"
+
+#: ../cf_comment_toolbar.php:177
+#: ../cf_comment_toolbar.php:186
+msgid "(to not display, leave blank)"
+msgstr "(για να μην εμφανιστεί, αφήστε το κενό)"
+
+#: ../cf_comment_toolbar.php:182
+msgid "Label of 'Quote' button (or link):"
+msgstr "Επιγραφή του πλήκτρου (ή συνδέσμου) «Παράθεση»:"
+
+#: ../cf_comment_toolbar.php:191
+msgid "Text message of 'Quote' action:"
+msgstr "Κείμενο όταν χρισημοποιείται η «Παράθεση»:"
+
+#: ../cf_comment_toolbar.php:199
+msgid "Characters of separation between the buttons (or links):"
+msgstr "Χαρακτήρες διαχωρισμού των πλήκτρων (ή συνδέσμων):"
+
+#: ../cf_comment_toolbar.php:203
+msgid "(you can insert HTML code also)"
+msgstr "(μπορείτε να χρησιμοποιήσετε κώδικα HTML αν θέλετε)"
+
+#: ../cf_comment_toolbar.php:208
+msgid "Enclose commentator's name in html tag &lt;b&gt;...&lt;/b&gt; :"
+msgstr "Το όνομα του συντάκτη του σχολίου, να τοποθετηθεί ανάμεσα σε html tag &lt;b&gt;...&lt;/b&gt;:"
+
+#: ../cf_comment_toolbar.php:212
+#: ../cf_comment_toolbar.php:223
+#: ../cf_comment_toolbar.php:280
+#: ../cf_comment_toolbar.php:292
+msgid "No"
+msgstr "Όχι"
+
+#: ../cf_comment_toolbar.php:213
+#: ../cf_comment_toolbar.php:224
+#: ../cf_comment_toolbar.php:281
+#: ../cf_comment_toolbar.php:293
+msgid "Yes"
+msgstr "Ναι"
+
+#: ../cf_comment_toolbar.php:219
+msgid "Add a link to his commentary on the name of the commentator :"
+msgstr "Να προστεθεί ένας σύνδεσμος στο όνομα του συντάκτη, που να οδηγεί στο αρχικό σχόλιό του:"
+
+#: ../cf_comment_toolbar.php:230
+msgid "Text to insert in anchor link, before comment ID :"
+msgstr "Εισαγωγικό κείμενο στον σύνδεσμο πριν το ID σχολίου:"
+
+#: ../cf_comment_toolbar.php:234
+msgid "(Insert <b>co_</b> if you do not know the format's links to comments of your theme)"
+msgstr "(Εισάγετε <b> co_ </ b> αν δεν γνωρίζετε την μορφή συνδέσμων των σχολίων της εμφάνισής σας)"
+
+#: ../cf_comment_toolbar.php:239
+msgid "Toolbar style:"
+msgstr "Μορφή toolbar:"
+
+#: ../cf_comment_toolbar.php:243
+msgid "Buttons"
+msgstr "Πλήκτρα"
+
+#: ../cf_comment_toolbar.php:244
+msgid "Links"
+msgstr "Σύνδεσμοι"
+
+#: ../cf_comment_toolbar.php:245
+msgid "Images"
+msgstr "Εικόνες"
+
+#: ../cf_comment_toolbar.php:247
+msgid "To customize the graphic appearance of image buttons, replace files 'first.png','previous.png', 'next.png', 'last.png', 'reply.png','quote.png', in the plugin's <b>images</b> folder using the same names for files"
+msgstr "Για να προσαρμόσετε την εμφάνιση των εικόνων, αντικαταστήστε τα αρχεία 'first.png', 'previous.png', 'next.png', 'last.png', 'reply.png', 'quote.png', στον φάκελο με τις <b>εικόνες</ b> του πρόσθετου, χρησιμοποιώντας τα ίδια ονόματα για τα αρχεία."
+
+#: ../cf_comment_toolbar.php:252
+msgid "Toolbar position:"
+msgstr "Τοποθέτηση toolbar:"
+
+#: ../cf_comment_toolbar.php:256
+msgid "Top of comment"
+msgstr "Πάνω από το σχόλιο"
+
+#: ../cf_comment_toolbar.php:257
+msgid "Bottom of comment"
+msgstr "Κάτω από το σχόλιο"
+
+#: ../cf_comment_toolbar.php:263
+msgid "Toolbar alignment:"
+msgstr "Στοίχιση toolbar:"
+
+#: ../cf_comment_toolbar.php:267
+msgid "Left"
+msgstr "Αριστερά"
+
+#: ../cf_comment_toolbar.php:268
+msgid "Right"
+msgstr "Δεξιά"
+
+#: ../cf_comment_toolbar.php:269
+msgid "Center"
+msgstr "Κέντρο"
+
+#: ../cf_comment_toolbar.php:270
+msgid "CSS style settings"
+msgstr "Ρυθμίσεις εμφάνισης CSS"
+
+#: ../cf_comment_toolbar.php:276
+msgid "Show buttons to navigate on your comments :"
+msgstr "Εμφάνιση πλήκτρων πλοήγησης στα σχόλια:"
+
+#: ../cf_comment_toolbar.php:283
+#: ../cf_comment_toolbar.php:295
+msgid "This feature is automatically disabled when using the paging of the comments"
+msgstr "Αυτό το χαρακτηριστικό απενεργοποιείται αυτόματα όταν τα σχόλια είναι σελιδοποιημένα."
+
+#: ../cf_comment_toolbar.php:288
+msgid "Enable smooth scrolling :"
+msgstr "Ενεργοποίηση ομαλής κύλισης:"
+
+#: ../cf_comment_toolbar.php:300
+msgid "Update Options"
+msgstr "Ενημέρωση επιλογών"
+
+#: ../cf_comment_toolbar.php:323
+msgid "WARNING! Add \"ID='{0}'\" into the field <textarea name='comment' ...></textarea> in the file 'comment.php' of your theme."
+msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ! Προσθέστε \"ID='{0}'\" μέσα στο πεδίο <textarea name='comment' ...></textarea> στο αρχείο 'comment.php' της εμφάνισής σας."
+
+#: ../cf_comment_toolbar.php:359
+#: ../cf_comment_toolbar.php:395
+msgid "Go to comment of this author"
+msgstr "Μετάβαση στο σχόλιο του συντάκτη"
+

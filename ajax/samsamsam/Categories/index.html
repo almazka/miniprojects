@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Книги по категориям</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="ru" />
+	<link rel="stylesheet" type="text/css" href="lab-2-1.css" />
+	<script type="text/javascript" src="../xmlhttprequest.js"></script>
+	<script type="text/javascript">
+		/*
+		**
+		**	Задание 1. Список категорий
+		**
+		*/
+		function fillCategories() {
+			var select = document.getElementById('selCategory');
+			var request = getXmlHttpRequest();
+			request.onreadystatechange = function() {
+				if (request.readyState != 4) return;
+				var sausage = request.responseText;
+				var partstext = sausage.split("\n");
+				
+				for (var i=0; i<partstext.length; i++) {
+					if (partstext[i] == "") continue;
+					var part = partstext[i].split(":");
+					var option = document.createElement("option");
+					option.setAttribute("value", part[0]);
+					var newtxt = document.createTextNode(part[1]);
+					option.appendChild(newtxt);
+					select.appendChild(option);
+				}
+				select.size = select.options.length;
+			};
+			request.open('GET', "getcategories.php", true);
+			request.send(null);
+		}
+	
+		
+		// При завершении загрузки страницы
+		window.onload = function(){
+		fillCategories();
+		}
+		
+	</script>
+</head>
+<body>
+	<h1>Книги по категориям</h1>
+	<form action="#" onsubmit="return false">
+		<div>
+			<label for="selCategory">Категория</label>
+			<select id="selCategory"></select>
+			<button onclick="alert('А это следующая лабораторная работа')">Показать</button>
+		</div>
+	</form>
+</body>
+</html>
+

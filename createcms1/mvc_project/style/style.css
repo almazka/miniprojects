@@ -1,0 +1,209 @@
+body{
+	font: normal small Arial, Helvetica, sans-serif;
+	color: #303335;
+	text-align:justify;
+	font-size:13px;
+	margin: 0;
+	background-image:url(../images/light_grey_floral_motif.png);
+}
+.post_preview {
+	margin: 10px;
+	border-bottom: 2px solid #c2c2c2;
+}
+.post_preview h2 {
+	text-align: left!important;
+	font-size: 18px;
+}
+.prev_img {
+	overflow: hidden;
+}
+.title_site {
+	display: block;
+	float: right;
+	font-family: Verdana;
+	font-size: 28px;
+	font-weight: bold;
+	padding-right: 10px;
+}
+#border
+{
+	width:769px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	background: #fff;
+}
+#header
+{
+	background:url(../images/bird.jpg) no-repeat center center;
+	height:205px;
+}
+
+.name
+{font-size:32px;
+color:#3C3C3C;
+font-family:"trebuchet ms";
+text-transform:uppercase;
+padding-top:55px;
+padding-left:15px;}
+.tag
+{padding-left:17px;
+font-size:11px;
+text-transform:uppercase;
+color:#ffffff;
+background-color:#9E191E;
+height:20px;
+line-height:20px;
+width:23	0px;
+font-weight:bold;}
+.sap2
+{color:#9E1C1C;
+width:6px;
+text-align:center;
+float:left;
+}
+
+.toplinks li
+{
+	text-transform: uppercase;
+	font-family: "trebuchet ms";
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	list-style: none;
+	padding: 15px 30px;
+	border-right: 1px dotted;
+}
+.toplinks li:last-of-type {
+	border-right: none;
+}
+.toplinks li a
+{
+	color:#fff;
+	text-decoration:none;
+}
+.toplinks li a:hover
+{
+	color:#ffffff;
+	text-decoration:none;
+}
+#mainarea
+{
+	width: 570px;
+	margin-bottom: 10px;
+	text-align: left;
+	background: #fff;
+	padding: 15px;
+	float: left;
+}
+#mainarea h2 {
+	text-align: center;
+}
+.textarea {
+	text-align: left;
+	padding: 0 15px;
+}
+.menu_left
+{
+	text-align:left;
+	float:left;
+}
+.toplinks
+{
+	overflow: hidden;
+	font-size: 15px;
+	color: #fff;
+	margin: 0;
+	background: #c9de96; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9de96), color-stop(44%,#8ab66b), color-stop(100%,#398235)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #c9de96 0%,#8ab66b 44%,#398235 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c9de96 0%,#8ab66b 44%,#398235 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=0 ); /* IE6-9 */
+
+}
+#main
+{
+	padding-top:10px;
+	text-align:left;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:10px;
+}
+a{
+	color:#DE5202;
+	font-weight:bold;
+	text-decoration:underline;
+}
+.body_post {
+	margin:10px;
+	border-bottom:2px solid #c2c2c2;
+	padding-bottom: 10px;
+}
+.body_post:last-of-type {
+	border-bottom:none;
+}
+.body_post img {
+	margin-right: 5px;
+}
+a:hover{
+	color:#DE5202;
+	text-decoration:none;
+}
+.quick-links {
+	padding-left: 10px;
+}
+.quick-links li
+{
+	line-height:35px;
+	list-style: none;
+}
+.quick-links li a
+{
+	color: #00843E;
+	font-weight:normal;
+	text-decoration:underline;
+}
+.quick-links li a:hover
+{
+	color:#CD1058;
+	text-decoration:none;
+}
+#bottom
+{
+	width:769px;
+	margin-top: 15px;
+	float: left;
+	overflow: hidden;
+
+}
+.style1 hr {
+	width: 50%;
+}
+.copy
+{
+	line-height:28px;
+	clear: left;
+}
+#rc-bg
+{
+	margin-top: 15px;
+	width:144px;
+	height:51px;
+	background-image: url(../images/flower-menu.png);
+	padding-left:15px;
+}
+#spacer
+{
+	height:40px;
+	line-height:40px;
+}
+.products
+{
+	width:168px;
+	border:2px dotted #BCBCBC;
+	margin-left:10px;
+	height:140px;
+	float:left;
+}

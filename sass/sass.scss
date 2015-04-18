@@ -1,0 +1,368 @@
+********************************
+****** Установка для SASS ******
+********************************
+sass-lang.com
+sudo apt-get install ruby
+gem -v должен выдать версию
+ruby -v должен тоже показать версию
+sudo gem install sass
+sass -? должно выдаться окно с командами
+
+********************************
+****** Установка Compass ******
+********************************
+Нужен для пущего удобства
+http://compass-style.org/install/
+sudo apt-get install ruby-compass
+compass -h должен показать команды
+
+Зайти в папку с проектом в терминале и
+compass init
+
+Появятся все папки набора
+
+Или через Fetch
+
+Настройка синхронизации
+gem install compass
+compass -h
+Далее заходим в терминале в папку с проектом и вводим compass watch
+Чтобы зайти в папку через терминал, используем cd и таб
+
+
+********************************
+**** Компиляция без Compass ****
+********************************
+Верстаем в .scss, потом нужно компилировать
+Заходим в терминале в папку, где лежит файал .scss
+
+sass --update styles.scss
+Он создаст styles.css, его и подключаем в html
+
+sass --update styles.scss:name.css
+Конвертировать styles.scss в файл с именем name.css
+
+sass --update folder:folder
+Конвертирует все файлы scss внутри папки с именем folder
+
+sass --watch folder:folder
+Наблюдение за всеми файлами scss в указанной папке, сразу все компилирует, как только меняем.
+Через двоеточие указывается конечная папка, она может быть и не та же самая
+
+Можно задать параметры конвертации
+nested - по-умолчанию, какой был код, так он и конвертируется
+В этом варианте при конвертации убираются все комментарии, которые написаны через //, оставляет комменты /*такие*/
+
+expanded - наиболее читабельный для человека
+sass --update style.scss --style expanded
+Такой же, как мы и пишем
+Комментарии тоже только /**/
+
+compact - ужатый, но читабельный
+sass --update style.scss --style compact
+Комментарии тоже только /**/
+
+compressed - вообще не читабельный, без пробелов и т.д.
+sass --update style.scss --style compressed
+Здесь все комментарии убираются, даже /**/ и все в одну строку.
+
+
+********************************
+* Использование внешних файлов *
+********************************
+Удобно переменные, например, все содержать в одном файле, а потом его куда угодно импортировать
+
+@import "import_file.scss";
+Импортирует файл на это место вместе с комментариями, при конвертации комменты с // убирает, естественно
+И все переменные работают
+
+
+********************************
+********** Переменные **********
+********************************
+В переменные можно пихать что угодно:
+Синтаксис:
+{
+$myColor: blue;
+$myVar: .25in;
+$myStr: " string for me";
+$myBool: true;
+$myVar: null;
+$myList: 1px solid black;
+}
+
+#lol {
+	background-color: $myColor;
+	border: $mylist;
+	&:after {
+		content: "$myStr";
+	}
+}
+
+Можно писать составным синтаксисом что-то с длинными свойсвами, как то:
+#lol {
+	border: {
+		width: $bW;
+		color: $bC;
+		style: $bS;
+	}
+	padding: {
+		left: $pL;
+		right: $pR;
+	} 
+}
+
+********************************
+********* Вложенности *********
+********************************
+.content {
+	p {
+		color: $myColor;
+	}
+	a {
+		text-decoration: none;
+		&:hover {
+			color: $myColor;
+		}
+	}
+}
+
+********************************
+****** Примеси (миксины) ******
+********************************
+1. Создаем миксину:
+@mixin .myMixin {
+	font-size: 13px;
+	border-color: #444;
+}
+
+2. Подключаем миксину
+.myStyle {
+	@include myMixin;
+}
+
+Миксины можно делать с созданием переменных
+@mixin quest ($width, $color, $style) {
+	border: {
+		width: $width;
+		color: $color;
+		style: $style;
+	} 
+}
+
+#pareo {
+	@include customBorder(3px,blue,dotted);
+}
+
+То же самое можно сделать с заданием умолчания
+@mixin quest ($width: 100px, $color: #777, $style: groove) {
+	border: {
+		width: $width;
+		color: $color;
+		style: $style;
+	} 
+}
+
+#pareo {
+	@include customBorder;
+}
+
+********************************
+********* Наследование *********
+********************************
+Чтобы через запятую в итоге прописывалось
+#lol {
+	background: #FFF;
+	height: 20px;
+}
+#lololo {
+	@extend #lol;
+	padding-left: 70px;
+	color: #004444;
+}
+
+В итоге будет
+#lol, #lololo {
+	background: #fff;
+	height: 20px;
+}
+#ololo {
+	padding-left: 70px;
+	color: #004444;
+}
+
+********************************
+********** Операторы **********
+********************************
+$myPadding: 10px;
+$myColori: #f00;
+#lol {
+	color: $myColor;
+	padding-top: $myPadding;
+	padding-bottom: $myPadding+20;
+	padding-left: ($myPadding+10)/2;
+	background-color: $myColori + #00f; // #f0f
+}
+
+********************************
+************** if **************
+********************************
+$gender: boy;
+$myNewColor: if($gender=="boy", #00f, #f00);
+Если в переменной $gender будет "boy", то ставим синий, иначе - красный
+
+.lol {
+	color: $myNewColor;
+}
+
+********************************
+************ Циклы ************
+********************************
+Цикл for
+Можно создавать классы с заданными свойствами автоматически. Например:
+
+$width: 940px;
+$gutter: 20px;
+$colorbutton: #223;
+$count: 5;
+$coloumn_width: $width/$count;
+
+.nav {
+	display: inline;
+	float: left;
+	margin-left: $gutter/2;
+	margin-right: $gutter/2;
+}
+@for $i from 1 through $count {
+	.nav_#{$i} {
+		@extend .nav;
+		$i*$coloumns_width - $gutter;
+	}
+}
+Создается столько, сколько надо по количеству классов .nav_1, .nav_2 и т.д.
+
+********************************
+*********** Функции ***********
+********************************
+Все функции находятся по ссылке
+http://sass-lang.com/docs/yardocs/Sass/Script
+
+Функции для цвета:
+
+ligthen(color, amount);
+осветлить
+$new: yellow;
+.lol {
+	color: ligthen($new, 20%);
+}
+
+darken(color, amount);
+затемнить
+
+saturate(color, amount);
+desaturate(color, amount);
+
+fadein(color, amount);
+
+fadeout(color, amount);
+
+fade(color, amount);
+
+mix(color1,color2);
+смешивать цвета
+
+hue(color);
+узнать параметры цвета, возвращает его нумер
+
+hsl(color, amount, amount);
+создание нового цвета на основе указанного
+$color: red;
+.lol {
+	color: hsl(hue($color), 45%, 60%);
+}
+
+saturation(color)
+lightness(color)
+alpha(color)
+
+grayscale(color)
+Конвертировать цвет в черно-белый
+
+complement(color)
+
+invert(color)
+Инвертирует указанный цвет
+
+Есть функции по прозрачности цветов
+
+
+********************************
+**** Математические функции ****
+********************************
+{
+round(number)
+округление числа
+
+ceil(number)
+floor(number)
+
+percenage(number)
+перевести в проценты
+
+abs()
+
+min(n1,n2,n3)
+найти минимальное из перечисленных чисел
+
+max(n1,n2,n3)
+найти максимальное из перечисленных чисел
+
+}
+
+********************************
+****** Создание спрайтов ******
+********************************
+В файле sass/config.rb должно стоять relative_assets = true;
+Далее просто:
+В папку img/sprite закидываем отдельные иконки в папке по имени будущего спрайта, напр social
+Это удобно, чтобы можно было менять состав справта, добавлять, убавлять части, и он его перелепит
+
+Затем прописываем в scss
+@import "compass/utilities/sprites";
+@import "sprite/social/*.png"; // запускаем создание спрайта из всех файлов png в папке sprite
+После сохранения в css создастся класс по имени .имяпапки-sprite с прописанным фоном
+
+Деректива @include all-имяпапки-sprites; создает плюс к этому для каждой части спрайта класс с именем .sprite-имяфайлакуска и соответственным сдвигом фона
+
+И эти классы можно приделывать к ссылкам в html или css
+Удобный способ данные классы подключить к ссылкам:
+a {
+	padding: 8px;
+	text-decoration: none;
+	&[href*="google.com"] {
+		@extend .social-google;
+	}
+}
+
+Способ 2:
+@include all-имяпапки-sprites; писать сразу внутри
+a {
+	padding: 8px;
+	text-decoration: none;
+	&[href*="google.com"] { @include social-sprites(google); }
+	&[href*="youtube.com"] { @include social-sprites(youtube); }
+	&[href*="vk.com"] { @include social-sprites(vk); }
+	&[href*="facebook.com"] { @include social-sprites(facebook); }
+}
+
+Волшебное добавление
+Если добавить в папку для спрайтов картинку с именем имя_hover или имя_active, то этот спрайт автоматически пропишется как картинка при соответственном hover или др. псевдоселекторе
+
+Задание других свойств спрайтам
+$имяпапки-layout: smart; // по умолчанию, спрайт вертикальный
+$имяпапки-layout: horizontal; // горизонтальный спрайт. Но осторожнее, надо указывать размеры места, где спрайт находится, иначе он фоном зальет все
+$имяпапки-layout: diagonal; // диагональный спрайт
+
+$имяпапки-sprite-dimensions: true; // по умолчанию false, это задание высоты и ширины каждой части спрайта
+
+$имяпапки-sprite-base-class: "myname"; // вместо имени папки можно задать свое имя для классов

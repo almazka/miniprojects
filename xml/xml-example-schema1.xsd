@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<complexType name="NameType">
+	<sequence>
+		<xs:element name="first" type="xs:string" />
+		<xs:element name="last" type="xs:string" />
+	</sequence>
+</complexType>
+<xs:element name="person">
+	<complexType>
+		<sequence>
+			<xs:element name="name" type="NameType" />
+			<xs:element name="age" type="xs:integer" />
+			<xs:element name="birthday" type="xs:date" />
+		</sequence>
+	</complexType>
+</xs:element>
+</xs:schema>

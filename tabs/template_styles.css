@@ -1,0 +1,75 @@
+.tabsection_container {
+clear: both;
+}
+html, body {
+font-family: Arial;
+font-size: 12px;
+color: #000;
+}
+.link_content {
+margin: 0 31px 0 5px;
+border-bottom: 1px solid #cbcbcb;
+height: 29px;
+}
+.tabsection_container .link_content .active, .tabsection_container_main .link_content .active {
+border: 1px solid #cbcbcb;
+border-bottom: none;
+background: #fff;
+top: 1px;
+}
+.tabsection_container .link_content .active {
+font-weight: bold;
+}
+.tabsection_container .link_content a, .tabsection_container_main .link_content a {
+display: inline-block;
+text-decoration: none;
+border-radius: 5px 5px 0 0;
+margin: 0 -2px;
+}
+.tabsection_container .link_content a {
+padding: 7px 14px;
+}
+a {
+font-size: 12px;
+color: #000;
+}
+.tabsection_container .tab_content, .tab_content_main {
+}
+.tabsection_container .tab_content {
+margin: 0 30px 0 3px;
+}
+.tabsection_container .tab_content .active {
+display: block!important;
+}
+.tabsection_container .tab_content .tab_cont {
+display: none;
+}
+.tabsection_container_main {
+margin: 33px 0 0 14px;
+}
+.tabsection_container_main .link_content {
+height: 35px;
+}
+.link_content {
+margin: 0 31px 0 5px;
+border-bottom: 1px solid #cbcbcb;
+height: 29px;
+}
+.tabsection_container_main .link_content .active {
+color: #ee673e;
+}
+.tabsection_container_main .link_content a {
+text-decoration: none;
+font: bold 17px Arial;
+padding: 8px 14px;
+}
+.tab_content_main {
+margin-right: 12px;
+}
+.tab_content_main .active {
+display: block !important;
+}
+.tab_content_main div[class*="main"] {
+display: none;
+overflow: hidden;
+}

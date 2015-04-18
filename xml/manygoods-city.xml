@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="manygoods-city.xsl" ?>
+
+<items>
+	<item city="Москва" org="ООО Рога и копыта" title="Кепка" value="120" />
+	<item city="Москва" org="ООО Рога и копыта" title="Велосипед" value="5" />
+	<item city="Москва" org="ООО Рога и копыта" title="Футболка" value="10" />
+
+	<item city="Москва" org="ООО Светик" title="Кепка" value="120" />
+	<item city="Москва" org="ООО Светик" title="Футболка" value="10" />
+
+	<item city="Москва" org="ООО Лютик" title="Велосипед" value="120" />
+	<item city="Москва" org="ООО Лютик" title="Футболка" value="10" />
+
+	<item city="Питер" org="ООО Стрела" title="Кепка" value="120" />
+	<item city="Питер" org="ООО Стрела" title="Велосипед" value="5" />
+	<item city="Питер" org="ООО Стрела" title="Футболка" value="10" />
+
+	<item city="Питер" org="ООО Светик" title="Кепка" value="120" />
+	<item city="Питер" org="ООО Светик" title="Футболка" value="10" />
+
+	<item city="Питер" org="ООО Петя 1" title="Велосипед" value="120" />
+	<item city="Питер" org="ООО Петя 1" title="Футболка" value="10" />
+</items>

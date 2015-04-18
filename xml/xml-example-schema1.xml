@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="xml-example-schema1.xsd">
+	<name>
+		<first>John</first>
+		<last>Smith</last>
+	</name>
+	<age>34</age>
+	<birthday>1999-08-09</birthday>
+</person>

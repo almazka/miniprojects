@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user>
+    <name>David Trens</name>
+    <email>david@trens.ru</email>
+    <msg>Hello, world!</msg>
+    <ip>::1</ip>
+    <dt>1410599023</dt>
+  </user>
+  <user>
+    <name>Nomer6</name>
+    <email>098@trol.ui</email>
+    <msg>Wwww</msg>
+    <ip>::1</ip>
+    <dt>1410604008</dt>
+  </user>
+  <user>
+    <name>Nomer6</name>
+    <email>098@trol.ui</email>
+    <msg>ttt</msg>
+    <ip>::1</ip>
+    <dt>1410604056</dt>
+  </user>
+  <user>
+    <name>Алёна</name>
+    <email>lol@lol.lol</email>
+    <msg>kkk</msg>
+    <ip>::1</ip>
+    <dt>1410604077</dt>
+  </user>
+  <user>
+    <name>Алёна</name>
+    <email>l-ponchik@narod.ru</email>
+    <msg>yyy</msg>
+    <ip>::1</ip>
+    <dt>1410604176</dt>
+  </user>
+</users>

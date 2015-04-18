@@ -1,0 +1,7 @@
+AddDefaultCharset UTF-8
+php_flag get_magic_quotes_gpc off
+Options Indexes FollowSymLinks
+<IfModule dir_module>
+DirectoryIndex
+</IfModule>
+php_flag display_errors on 

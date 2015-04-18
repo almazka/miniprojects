@@ -1,0 +1,123 @@
+﻿<!doctype html>
+
+<html>
+<head>
+	<title>Раскрывающейся списка</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		ul.expandable li { list-style-image: url('img/point.gif') }
+		li ul.expandable { display: none } /* выставить в none */
+	</style>
+	<script type="text/javascript">
+		/*
+			Опишите функцию setPlusIcon(), которая 
+			- устанавливает для элементов li значок [+], 
+				если этот элемент имеет вложенный список
+			- регистрирует функцию aClick в качестве обработчика события onclick
+				для всех ссылок
+		*/
+		/*
+			Запустите функцию setPlusIcon() при загрузке страницы
+		*/
+		window.onload = setPlusIcon;
+		
+		function setPlusIcon(){
+			var l = document.getElementsByTagName('li');
+			var lnk = document.getElementsByTagName('a');
+			for(var i=0; i<l.length; i++){
+				var allULs = l[i].getElementsByTagName('ul');
+				if (allULs.length>0) {
+					if (allULs[0].className == "expandable") {
+						l[i].setAttribute("style","list-style-image: url('img/plus.gif')");
+					}
+				}
+			}
+			for(var i=0; i<lnk.length; i++) {
+			try {
+				lnk[i].addEventListener("click", aClick, false);
+			} catch(e){
+				lnk[i].attachEvent("onclick",aClick);
+			}
+			}
+		}
+		
+		/*
+			Опишите функцию aClick(), которая обрабатывает щелчок по ссылке
+			1. Получите объект - ссылку, по которой был сделан щелчок 
+			2. Найдите родительский li
+			3. Найдите вложенный список
+			4. Если вложенных списков нет - разрешите переход по ссылке
+			5. Назначьте вложенному списку нужные свойства и поменяйте иконку
+			6. Запретите переход по ссылке
+		*/
+		function aClick(e){
+		var a = e.target;
+		var li = a.parentNode;
+		var uLs = li.getElementsByTagName('ul');
+		if (uLs.length == 0) {return true;}
+
+		if (uLs[0].style.display == "") {
+			uLs[0].style.display = "block";
+			li.style.listStyleImage = "url('img/minus.gif')";
+			
+		} else {
+			uLs[0].style.display = "";
+			li.style.listStyleImage = "url('img/plus.gif')";
+		}
+		try {
+			e.preventDefault();
+			} catch(r){
+			e.returnValue = false;
+		}
+	}			
+	</script>
+</head>
+
+<body>
+	<h1>Пример раскрывающегося списка</h1>
+	<ul class="expandable">
+		<li>
+			<a href="http://ya.ru">Книги</a>
+			<ul class="expandable">
+				<li>
+					<a href="#">Отечественные</a>
+					<ul class="expandable">
+						<li><a href="#">Детективы</a></li>
+						<li><a href="#">Научная фантастика</a></li>
+						<li><a href="#">Исторические</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Зарубежные</a>
+					<ul class="expandable">
+						<li><a href="#">Детективы</a></li>
+						<li><a href="#">Научная фантастика</a></li>
+						<li><a href="#">Исторические</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+ 		<li>
+			<a href="#">DVD</a>
+			<ul class="expandable">
+				<li>
+					<a href="#">Отечественные</a>
+					<ul class="expandable">
+						<li><a href="#">Детективы</a></li>
+						<li><a href="#">Научная фантастика</a></li>
+						<li><a href="#">Исторические</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Зарубежные</a>
+					<ul class="expandable">
+						<li><a href="#">Детективы</a></li>
+						<li><a href="#">Научная фантастика</a></li>
+						<li><a href="#">Исторические</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

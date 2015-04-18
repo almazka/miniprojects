@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<script type="text/javascript" src="jquery.js"></script>
+	<title>Всплывашки</title>
+	<meta charset=utf-8 />
+	<meta name="keywords" content="ключевые слова" />
+	<meta name="description" content="На нашем сайте вы можете..." />
+	<link href="template_styles.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="catalog active">
+			<div class="catalog_menu">
+				<a href="#">Входные <br/>&nbsp;&nbsp; металлические двери</a>
+				<a href="#">Межкомнатные двери</a>
+				<a href="#">Замки и фурнитура</a>
+				<a href="#">Арки</a>
+				<a href="#">Охранные системы</a>
+				<a href="#">Акции</a>
+			</div>
+				<a href="#" class="button_orange_menu" id="catalog_menu">Каталог<span>&#9701;</span> 
+				</a>
+		</div>
+			<span class="open_modal city" id="city_box">Санкт-Петербург</span><i> &#9660;</i>
+			<div class="orders">
+				<a class="open_modal dashed_lnk" id="order_call" href="#">Заказать обратный звонок</a>
+				<a class="open_modal dashed_lnk" href="#">Вызов замерщика бесплатно</a>
+			</div>
+			
+
+<!--Сами дивы-всплывашки-->				
+<div class="js_m_window modal_form order_call">
+	<a href="#" class="close_button"><img src="images/close-button.jpg" alt="Закрыть"></a>
+	<h3>Обратный звонок</h3>
+	<form name="call_form" action="#">
+		<p class="data_list">Ваше имя*:</p>
+		<input type="text">
+		<p class="data_list">Мобильный телефон*:</p>
+		<input type="text">
+		<p class="data_list">Желаемое время звонка:</p>
+		<input type="text">
+		<p class="data_list_captcha data_list">Введите символы с картинки*:</p>
+			<div class="captcha">
+			<input type="hidden" name="captcha_sid">
+				<img src="images/code-captcha.jpg" alt="CAPTCHA">
+			</div>
+			<a class="update_img" href="#">
+				<img src="images/update_captcha.png" width="28" height="37" alt="Поменять картинку">
+			</a>
+			<input type="text" name="captcha_word" maxlength="50">
+			<p class="additional">* - поля, отмеченные звездочкой, обязательны для заполнения</p>
+			<div class="clear_box"></div>
+		<input type="submit" name="form_submit" class="orange_button" value="Ждать звонка">
+	</form>
+</div>
+<div class="js_m_window modal_help city_box">
+	<a href="#" class="close_button"><img src="images/close-button.jpg" alt="Закрыть"></a>
+	<h3>Укажите ваш город</h3>
+	<a href="#" class="active">Санкт-Петербург</a>
+	<a href="#">Москва</a>
+	
+</div>
+	</body>
+</html>

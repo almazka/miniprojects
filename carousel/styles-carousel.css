@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: url(http://omnomlife.ru/wp-content/uploads/2013/11/body-bg-.png);
+}
+.b-carousel  {
+	width: 1060px;
+	margin: 50px auto;
+}
+.a-carousel-image-link h3 {
+	font: italic bold 12px Verdana;
+	color: #B10303;
+	text-align: left;
+	padding: 2px 6px 0 10px;
+	margin-bottom: 0px;
+	text-shadow: 1px 1px 1px #FFFFFF;
+}
+.a-carousel-image-link img {
+	width: 110px;
+	border-radius: 30px 10px;
+	box-shadow: 1px 0px 10px rgba(0,0,0,.5);
+	-webkit-box-shadow: 1px 0px 10px rgba(0,0,0,.5);
+	padding: 2px;
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #e8e4e3;
+	background: #fff;
+	margin: 0 auto 10px;
+}
+div.corners:before {
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-right: 0px solid transparent;
+	border-left: 10px solid transparent;
+	border-bottom: 8px solid #8B0000;
+	position: absolute;
+	z-index: 1;
+	top: 81px;
+	left: 12px;
+}
+span.tag {
+	display: block;
+	padding: 4px;
+	font: bold 11px Verdana;
+	top: 90px;
+	position: absolute;
+	left: 12px;
+	background: #c82201;
+	background: -moz-linear-gradient(left, #c82201 0%, #b41f01 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#c82201), color-stop(100%,#b41f01));
+	background: -webkit-linear-gradient(left, #c82201 0%,#b41f01 100%);
+	background: -o-linear-gradient(left, #c82201 0%,#b41f01 100%);
+	background: -ms-linear-gradient(left, #c82201 0%,#b41f01 100%);
+	background: linear-gradient(to right, #c82201 0%,#b41f01 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c82201', endColorstr='#b41f01',GradientType=1 );
+	z-index: 2;
+	text-shadow: 1px 1px 1px #131212;
+	color: #ede7c2;
+	border-right: 2px solid #F78989;
+	box-shadow: 0px 0px 0px 1px #FFA3A3;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+	.h-carousel-wrapper {
+		width: 918px;
+		position: relative;
+		overflow: hidden;
+		margin: 0 auto; /* выравниваем по центру относительно родительского блока */
+	}
+		.h-carousel-items {
+			width: 10000px; /* устанавливаем большую ширину для набора элементов карусели, чтобы в неё всё поместилось */
+			position: relative; /* позиционируем блок относительно основной области карусели */
+		}
+			.b-carousel-block {
+				float: left;
+				width: 153px;
+				padding-top: 5px;
+				position: relative;
+			}
+				.a-carousel-image-link {
+					display: block;
+					text-align: center;
+					text-decoration: none;
+				}
+	.b-carousel-button-left, .b-carousel-button-right {
+		width: 23px;
+		height: 35px;
+		position: relative;
+		top: 60px;
+		cursor: pointer;
+	}
+	.b-carousel-button-left {
+		float: left;
+		background: url(img/left-arrow.png) no-repeat;
+	}
+	.b-carousel-button-right {
+		float: right;
+		background: url(img/right-arrow.png) no-repeat;
+	}

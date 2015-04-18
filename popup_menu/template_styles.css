@@ -1,0 +1,129 @@
+/*стиль общий для боди*/
+body {
+min-height: 100%;
+min-width: 950px;
+display: block;
+}
+a img {
+border-width: 0px;
+border-style: none;
+}
+h3 {
+font-size: 16px;
+}
+html, body {
+font-family: Arial;
+font-size: 12px;
+color: #000;
+}
+a {
+font-size: 12px;
+color: #000;
+}
+/*всплывашки*/
+.catalog_menu {
+position: absolute;
+background: #fff;
+width: 200px;
+padding: 40px 0 0 0px;
+border-bottom: 1px solid #cbcbcb;
+box-shadow: 5px 3px 4px #cecece, -1px -1px 0px #cbcbcb;
+border-radius: 7px;
+z-index: 1100;
+display: none;
+}
+.catalog #catalog_menu span {
+	-moz-transform: rotate(48deg);
+	-ms-transform: rotate(48deg);
+	-webkit-transform: rotate(48deg);
+	-o-transform: rotate(48deg);
+	transform: rotate(48deg);
+}
+.catalog.active #catalog_menu span {
+	-moz-transform: rotate(48deg);
+	-ms-transform: rotate(48deg);
+	-webkit-transform: rotate(139deg);
+	-o-transform: rotate(48deg);
+	transform: rotate(48deg);
+	text-shadow: 0px 1px 0px #974b27;
+}
+.catalog_menu a {
+display: block;
+text-decoration: none;
+font: bold 14px/14px Arial;
+padding: 18px 0 14px 0px;
+text-indent: 12px;
+}
+.active .catalog_menu {
+	display: block!important;
+}
+.catalog .button_orange_menu {
+position: relative;
+z-index: 1110;
+}
+.button_orange_menu {
+font: bold 14px Arial;
+color: #fff;
+text-decoration: none;
+text-shadow: 0px -1px 0px #974b27;
+padding: 8px 12px 10px 17px;
+width: 171px;
+border-radius: 5px;
+display: block;
+border-top: 1px solid #fec6ab;
+border-bottom: 1px solid #9e3d1a;
+box-shadow: inset 0px -1px #cd5022, 0px 1px 7px darkgray;
+background: #ff894c;
+background: -moz-linear-gradient(top, #ff894c 0%, #ff6529 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff894c), color-stop(100%,#ff6529));
+background: -webkit-linear-gradient(top, #ff894c 0%,#ff6529 100%);
+background: -o-linear-gradient(top, #ff894c 0%,#ff6529 100%);
+background: -ms-linear-gradient(top, #ff894c 0%,#ff6529 100%);
+background: linear-gradient(to bottom, #ff894c 0%,#ff6529 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff894c', endColorstr='#ff6529',GradientType=0 );
+}
+.city {
+text-decoration: underline;
+cursor: pointer;
+font: 16px Verdana;
+color: #f0663f;
+}
+i {
+font-weight: normal;
+}
+.dashed_lnk {
+border-bottom: 1px dashed;
+display: inline-block;
+text-decoration: none;
+}
+div[class*="modal"] {
+z-index: 2000;
+border-radius: 8px;
+position: absolute;
+display: none;
+}
+.modal_form {
+width: 400px;
+}
+.help_content, .modal_form, .city_box {
+padding: 11px 10px 18px 12px;
+box-shadow: 1px 3px 5px #c0c0c0;
+width: 260px;
+border: 1px solid #cbcbcb;
+background: #fff;
+overflow: hidden;
+}
+.close_button {
+display: block;
+position: absolute;
+right: 10px;
+}
+.modal_form h3 {
+margin: 11px 0 7px 10px;
+}
+form[name="call_form"] {
+padding-left: 0;
+}
+form[name="call_form"] .data_list {
+width: 148px;
+}

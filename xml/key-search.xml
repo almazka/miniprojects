@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="key-search.xsl" ?>
+<root>
+	<course id="XML">
+		<title>XML и XSLT. Современные технологии</title>
+		<keywords>
+			<keyword>XML</keyword>
+			<keyword>XSL</keyword>
+			<keyword>XSLT</keyword>
+			<keyword>XPath</keyword>
+		</keywords>
+		<teachers>
+			<teacher>Борисов И.О.</teacher>
+			<teacher>Никитин И.Г.</teacher>
+		</teachers>
+	</course>
+	<course id="AJAX">
+		<title>ALAX. Современные технологии</title>
+		<keywords>
+			<keyword>AJAX</keyword>
+			<keyword>XSL</keyword>
+			<keyword>JavaScript</keyword>
+			<keyword>XSLT</keyword>
+		</keywords>
+		<teachers>
+			<teacher>Борисов И.О.</teacher>
+			<teacher>Никитин И.Г.</teacher>
+		</teachers>
+	</course>
+	<course id="PHP">
+		<title>PHP. Современные технологии</title>
+		<keywords>
+			<keyword>XML</keyword>
+			<keyword>XSLT</keyword>
+			<keyword>PHP</keyword>
+		</keywords>
+		<teachers>
+			<teacher>Борисов И.О.</teacher>
+			<teacher>Шуков И.Г.</teacher>
+		</teachers>
+	</course>
+</root>
