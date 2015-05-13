@@ -25,7 +25,7 @@ a img {
 	border-style: none;
 }
 
-li {
+li.item {
 	float: left;
 	margin: 5px;
 	width: 200px;
@@ -33,6 +33,6 @@ li {
 	text-align: center;
 }
 
-ul {
+ul.contain {
 	width: 990px;
 }

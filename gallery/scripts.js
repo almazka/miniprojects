@@ -11,5 +11,6 @@
                 counter_separator_label: ' из ', /* разделитель для счётчика, по умолчанию косая черта (слэш) "/" */
                 theme: 'facebook', /* указываем тему: light_rounded, dark_rounded, light_square, dark_square или facebook */
                 modal: false, /* если установлено значение True, закрыть окно можно только по нажатию "Закрыть" */
+                social_tools: false
                 });
         });
