@@ -1,7 +1,7 @@
 <?php
-define('DB_HOST', 'htdocs');
-define('DB_LOGIN', 'mysql');
-define('DB_PASSWORD', 'mysql');
+define('DB_HOST', 'localhost');
+define('DB_LOGIN', 'root');
+define('DB_PASSWORD', 'rafikider');
 define('DB_NAME', 'gbook');
 mysql_connect(DB_HOST,DB_LOGIN,DB_PASSWORD);
 mysql_select_db(DB_NAME) or die(mysql_error());

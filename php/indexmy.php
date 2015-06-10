@@ -1515,14 +1515,19 @@ $conn = new PDO("firebird:dbname=hostname:C:\path\to\database.fdb","username","p
 $conn = new PDO("informix:DSN=InformixDB","username","pass"); // для Informix
 $conn = new PDO("dblib:host=hostname:port;dbname=mydb","username","pass"); // для DBLIB
 
-Подключение через ini файл
+Подключение через ini файл (устарело и не комильфо)
 в файле config.ini пишем:
 db.conn="mysql:host=localhost;dbname=test"
 db.user='vasya'
 db.pass='parol'
 В нужном php пишем
 $params = parse_ini_file("config.ini");
-$conn = new PDO($params['db.conn'],$params['db.user'], $params[db.user],$params['db.pass']);
+$conn = new PDO($params['db.conn'],$params['db.user'],$params['db.pass']);
+
+Подключение через файл php
+В файле config.php пишем константы
+include '../config.php';
+$db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS);
 
 Выполнение запроса к БД
 $result = $conn->exec($sql); // где conn - подключалка, см выше, sql - запрос, exec возвращает количество строк, над которыми было выполнено действие НО! SELECT с ним не работает
@@ -1659,6 +1664,7 @@ regexlib.com
 Модификаторы
 Функции -поиска, -замены, -разделения на части
 
+[a-zа-я0-9_]{1,500}$/i
 Метасимволы:
 \ экранирование метасимволов и разделителей, внутри них можно писать те же +,* всякие и это не будет означать метасимволы, а будет означать текст, что мы ищем *,+ и т.д.
 . любой символ, кроме символа перевода строки

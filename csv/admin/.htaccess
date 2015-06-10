@@ -1,0 +1,5 @@
+AddDefaultCharset utf8
+AuthName "Admin Panel"
+AuthType Basic  
+Require user admin
+AuthUserFile "/home/almazka/workspace/personalhomepage/.htpasswd" 

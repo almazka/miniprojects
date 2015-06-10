@@ -86,7 +86,7 @@ div {
 /********************************
 ******* Слайдер BX Slider *******
 ********************************/
-Подключаем через фетч
+Подключаем через фетч. На данный момент лучший для меня.
 
 Структура:
 <ul class="yourclass">
@@ -101,6 +101,7 @@ div {
 /********************************
 ********* Фильтр блоков *********
 ********************************/
+Плагин фильтра Quicksand
 Подключаем через Фетч
 
 Минимальная структура:
@@ -123,6 +124,38 @@ div {
 <script type="text/javascript" src="js/jquery.quicksand-1.4.js"></script>
 
 С кнопками переключения 2 варианта в toscript - либо просто a-шки, либо li>a
+
+/********************************
+************ MixItUp ************
+********************************/
+Через Fetch
+Нормальный плагин фильтрации. Много фишечек тоже. На днный момент - мой фаворит
+Структура. Любая, лишь бы у летающего элемента был class="mix  category-1  category-2  category-3"
+Вместо button и div мб что угодно, li-шки, не вопрос. Для примера:
+
+<div id="Container">
+    <div class="mix category-1" data-my-order="1"> ... </div>
+    <div class="mix category-1" data-my-order="2"> ... </div>
+    <div class="mix category-2" data-my-order="3"> ... </div>
+    <div class="mix category-2" data-my-order="4"> ... </div>
+</div>
+
+Прописываем сами названия категорий в порядке, каком нам надо:
+<button class="filter" data-filter=".category-1">Category 1</button>
+<button class="filter" data-filter=".category-2">Category 2</button>
+
+Можно автоматический переключатель поставить list-grid
+<button class="sort" data-sort="my-order:asc">Ascending Order</button>
+<button class="sort" data-sort="my-order:desc">Descending Order</button>
+
+В CSS прописать
+#Container .mix{
+    display: none;
+}
+
+HTML
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
 
 /********************************
 ***** Всплывающие подсказки *****
@@ -212,16 +245,16 @@ targets.bind( 'mouseenter', function()
 /*end tooltip*/
 
 /********************************
-********* Переключатель *********
+**** Переключатель list-grid ****
 ********************************/
 Без фетча
 Все описано здесь - http://jsfiddle.net/v57JF/
 Достаточно легко.
 
 /********************************
-****** Увеличение по клику ******
+*********** Colorbox ***********
 ********************************/
-Colorbox
+Плагин увеличения изображения
 Структура практически любая, главное сделать ссылку, которая ведет на увеличенное изображение. Любой класс можно прописать в js
 
 Подключаем через fetch
@@ -233,3 +266,18 @@ Colorbox
 
 Для того, чтобы со стрелками было переключение по группе, указывается rel по классу
 $(".group1").colorbox({rel:'group1'});
+
+/********************************
+********* PrettyGallery *********
+********************************/
+Плагин увеличения изображений + галерея и много др фишечек. Лучший на данный момент.
+Структура
+Практически любая, лишь бы была ссылка, ведущая на изображение с rel-ом и title, можно без
+<a href="images/lepestok.jpg" rel="prettyPhoto[gallery]" title="ЦветуЁчек1">
+
+Подключаем через fetch
+В style.sass
+@import url(../css/prettyPhoto.css);
+
+В конец html
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>

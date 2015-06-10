@@ -1,5 +1,5 @@
 <?php
-define(FILENAME, "fileuser.txt");
+define("FILENAME", "fileuser.txt");
 function Clear($value)
 {
 	return trim(strip_tags($value));
