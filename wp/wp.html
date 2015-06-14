@@ -764,7 +764,7 @@ register_uninstall_hook();
 В нем пишем:
 if (!defined(WP_UNINSTALL_PLUGIN))
 	exit;
-wp_mail(get_bloginfo('admin_email'), 'Плагин активирован','Произошла успешная активация плагина'); // наше действие по удалении
+wp_mail(get_bloginfo('admin_email'), 'Плагин удален','Произошло успешное удаление плагина'); // наше действие по удалении
 
 /********************************
 ** Отличние фильтров от экшнов **
@@ -1521,9 +1521,10 @@ function my_styles_scripts()
 }
 
 function my_gallery( $atts ) {
+	$options = get_option('gallery_options');
 	$img_id = explode(',', $atts['ids']); // вытащим ids картинок из шорт-кода в массив
-	if (!$img_id[0]) return '<div class="gallery"><p>В галерее нет картинок</p></div>'; // проверка на наличие картинок
-	$html = '<div class="gallery">';
+	if (!$img_id[0]) return '<div class="gallery"><h3>' . $options['gallery_option_title'] . '</h3>' . $options['gallery_option_text'] . '</div>'; // проверка на наличие картинок
+	$html = '<div class="gallery"><h3>' . $options['gallery_option_title'] . '</h3>';
 	foreach ($img_id as $item) {
 		$img_data = get_posts(array( // get_posts чтоб получить полный объект каждой картинки с полным описанием ее поста, чтоб можно было вытащить любые свойства, всчкие post_title и т.д., обращаясь к $img_data[0]
 			'p' => $item,
@@ -1544,6 +1545,57 @@ function my_gallery( $atts ) {
 
 	return $html;
 }
+
+Установка настроек на существующей странице настроек WP
+add_action('admin_init', 'gallery_option');
+
+function gallery_option()
+{
+	register_setting('general', 'gallery_options');
+
+	
+	add_settings_section(
+		'gallery_section_id',
+		'Опции галереи',
+		'',
+		'general'
+	);
+
+	add_settings_field(
+		'gallery_option_title',
+		'Название галереи',
+		'gallery_title_cb',
+		'general',
+		'gallery_section_id'
+	);
+	add_settings_field(
+		'gallery_option_text',
+		'Текст при отсутствии картинок',
+		'gallery_text_cb',
+		'general',
+		'gallery_section_id'
+	);
+}
+
+function gallery_title_cb()
+{
+	$options = get_option('gallery_options');
+	?>
+	<input type="text" name="gallery_options[gallery_option_title]" id="gallery_options[gallery_option_title]" value="<?php echo esc_attr($options['gallery_option_title']); ?>" class="regular-text"/>
+	<?php
+}
+function gallery_text_cb()
+{
+	$options = get_option('gallery_options');
+	?>
+	<input type="text" name="gallery_options[gallery_option_text]" id="gallery_options[gallery_option_text]" value="<?php echo esc_attr($options['gallery_option_text']); ?>" class="regular-text"/>
+	<?php
+}
+
+В файле uninstall.php
+if (!defined(WP_UNINSTALL_PLUGIN))
+	exit;
+delete_option('gallery_options'); // удаляет опцию. Если несколько, то для каждой свою функцию delete_option
 
 /********************************
 ****** Записи со стены ВК ******
@@ -1568,9 +1620,13 @@ delete_option(); // удалить настройку
 add_option('name_option', 111); // передаем уникальное имя и значение. Она добавится на страница options
 
 Касаемо настроек плагинов, есть основные функции:
-register_setting( $option_group, $option_name, $sanitize_callback ); // option_group - группа, option_name - имя настройки. Регает новую опцию, внутри используются функции, описанные выше, автоматом и может вызывать функцию sanitize_callback типа фильтра, через которую данные проходят. МОжно добавить эти настройки в любой раздел настроек, там Чтение и т.д.
+register_setting( 
+	$option_group, // группа
+	$option_name, // имя настройки
+	$sanitize_callback // функция типа фильтра, через которую данные проходят. МОжно добавить эти настройки в любой раздел настроек, там Чтение и т.д.
+); // Регает новую опцию, внутри используются функции, описанные выше, автоматом и может вызывать функцию sanitize_callback
 add_settings_field(); // добавялет поле для опции, вешается на хук admin_init
-add_settings_section();
+add_settings_section(); // добавить секцию функций, в которую удобно объединить несколько полей
 
 add_action('admin_init', 'first_option');
 
@@ -1599,10 +1655,14 @@ echo get_option('my_first_option');// для вывода опции пропи�
 
 Чтобы не регестрировать тысячу опций по одной, если их много - их надо группировать в блоки с пом.add_settings_section();
 
-Создаем плагин.
+/********************************
+*** Настройки темы из плагина ***
+********************************/
 
-Основной файл:
+Создаем плагин по опциям Темы (цвета менять и т.д.)
+Настройки будем хранить на странице Общие
 
+Основной файл плагина:
 add_action('admin_init', 'theme_options');
 
 function theme_options()
@@ -1612,17 +1672,307 @@ function theme_options()
 		'theme_options_section_id', // id
 		'Опции темы', // имя
 		'theme_options_section_cb', // функция для генерации html кода описания секции, можно пустым оставлять
-		'general' // для какой страница секцияЫ
+		'general' // для какой страницы секция
 	);
-	add_settings_field( // поле для хранения настройки для фона
-		'theme_options_body', 
-		'Цвет фона', 
-		'theme_body_cb', 
+	add_settings_field( // добавляем поле для хранения настройки для фона
+		'theme_options_body', // id
+		'Цвет фона', // заголовок поля
+		'theme_body_cb', // функция, которая будет вызываться
+		'general', // на какой странице поле
+		'theme_options_section_id' // в какую именно секцию выводить поле - ее id
+	);
+	add_settings_field(
+		'theme_options_header', 
+		'Цвет хедера', 
+		'theme_header_cb', 
 		'general', 
-		'theme_options_section_id');
-	add_settings_field('theme_options_header', 'Цвет хедера', 'theme_body_cb', 'general', 'theme_options_section_id'); // поле для хранения настройки для шапки
-
+		'theme_options_section_id'
+	); // созд. поле для хранения настройки для шапки
 }
-остановилась на папка 3, урок 2, 13:40
+
+function theme_options_section_cb()
+{
+	echo "<p>Описание секции</p>";
+	?>
+	<input type="text" name="theme_option" id="theme_option" value="<?php echo esc_attr(get_option('theme_option')); ?>" class="regular-text"/>
+	<?php
+}
+
+function theme_body_cb()
+{
+	$options = get_option('theme_options');
+	?>
+	<input type="text" name="theme_option[theme_options_body]" id="theme_options_body" value="<?php echo esc_attr($options['theme_option_body']); ?>" class="regular-text"/>
+	<?php
+}
+
+function theme_header_cb()
+{
+	$options = get_option('theme_options');
+	?>
+	<input type="text" name="theme_option[theme_options_header]" id="theme_options_header" value="<?php echo esc_attr($options['theme_option_header']); ?>" class="regular-text"/>
+	<?php
+}
+?>
+Когда все опции зареганы, как их использовать
+Настраиваемая тема из админки
+
+Например, задать body указанный цвет.
+Заходим в header.php, вверху пишем, перед doctype 
+$options = get_option('theme_options');
+
+Потом в тег body
+<body style="background: <?php echo $options['theme_option_body']; ?>">
+
+Все подставится
+
+НО!
+Т.к. нужна проверка, подставлять значение если поле не пустое, то лучше это делать через js
+<?php
+В плагине подключаем файл js:
+
+add_action('wp_enqueue_scripts', 'scripts_styles');
+
+function scripts_styles()
+{
+	$theme_options = get_option('theme_options');
+	wp_register_script('options', plugins_url('js/options.js', __FILE__), array('jquery');
+	wp_enqueue_script('options');
+	wp_localize_script(
+		'options',
+		'obj', // имя объекта, который создастся
+		$theme_options // данные, передаваемые в объект
+	); // передаем параметр $theme_options в скрипт в виде объекта
+}
+
+В файле options.js:
+jQuery(document).ready(function($){
+	if (obj.theme_options_body) {
+		$('body').css('background',obj.theme_options_body)
+	}
+	if (obj.theme_options_header) {
+		$('header').css('background',obj.theme_options_header)
+	}
+});
+
+Удаление опций. Например, если плагин удален, нужно подчищать за собой опции, если мы их создавали данным плагином
+
+Файл uninstall.php:
+if (!defined(WP_UNINSTALL_PLUGIN))
+	exit;
+delete_option('theme_options'); // удаляет опцию. Если несколько, то для каждой свою функцию delete_option
+
+/********************************
+** Отдельная страница настроек **
+********************************/
+add_options_page(); // функция добавляет страницу опций в раздел меню Settings. Ее нужно вешать на хук admin_menu
+Помимо add_options_page() можно использовать функции добавление в другие места:
+add_dashboard_page(); // В раздел Dashboard
+add_posts_page(); // В раздел Posts
+add_media_page(); // В разделе медиафайлов
+и т.д. Для каждого раздела есть своя функция, можно поместить страницу настроек куда угодно в меню, чтобы совпадало по тематике
+
+ДЕлаем на примере того же плагина настройки темы (цвета и т.д.)
+
+В основном файле плагина:
+
+add_action('admin_menu', 'my_admin_menu');
+add_action('admin_init', 'admin_settings');
+
+function admin_settings()
+{
+	register_setting(
+		'theme_options_group', // id группы опций
+		'theme_options',
+		'theme_options_sanitize' // функция обработки данных
+	);
+
+	add_settings_section(
+		'theme_options_id',
+		'Секция Опции темы',
+		'',
+		'my-theme-options' // на какую страницу выводить эту секцию, slug
+	);
+	add_settings_field(
+		'theme_options_body',
+		'Цвет фона',
+		'theme_body_cb',
+		'my-theme-options',
+		'theme_options_id', // id секции, для которой поле
+		array('lable_for' => 'theme_options_body'); // добавление дополнительных параметров, добавить лэйбл к инпуту, для этого ключ lable_for
+	);
+	add_settings_field(
+		'theme_options_header',
+		'Цвет хедера',
+		'theme_header_cb',
+		'my-theme-options',
+		'theme_options_id', // id секции, для которой поле
+		array('lable_for' => 'theme_options_header');
+	);
+}
+
+function theme_body_cb()
+{
+	$options = get_option('theme_options');
+	?>
+	<input type="text" name="theme_option[theme_options_body]" id="theme_options_body" value="<?php echo esc_attr($options['theme_option_body']); ?>" class="regular-text"/>
+	<?php
+}
+
+function theme_header_cb()
+{
+	$options = get_option('theme_options');
+	?>
+	<input type="text" name="theme_option[theme_options_header]" id="theme_options_header" value="<?php echo esc_attr($options['theme_option_header']); ?>" class="regular-text"/>
+	<?php
+}
+
+function theme_options_sanitize()
+{
+	$clean_options = array();
+	foreach ($options as $key => $value) {
+		$clean_options[$key] = strip_tags($value); // очищение от тегов
+	}
+	return $clean_options;
+}
+
+function my_admin_menu()
+{
+	add_options_page(
+		'Опции плагина настроек темы', // заголовок страницы, title
+		'My Ptugin Theme Settings', // название пункта меню
+		'manage_options', // права доступа к странице setting
+		'my-theme-options', // слаг для url, можно здесь указать __FILE__, тогда в адресе просто будет название папки с плагином и название файла плагина
+		'my_option_page' // функция генерации элементов, полей для страницы
+	);
+}
+
+function my_option_page()
+{
+	$options = get_option('theme_options');
+	?>
+	<div class="wrap">
+		<h2>Опции плагина</h2>
+		<p>Опции плагина настроек текущей темы</p>
+		<form action="options.php" method="post"> <!-- options.php надо указывать, чтобы данные отправлялись в обработчик wp, а не на эту же страницу, а там куча проверок и так надежнее -->
+		);
+			<?php 
+			settings_fields( 'theme_option_group' ); // добавляет скрытые поля для конкретной группы полей
+			do_settings_sections( 'my-theme-options' );
+
+			submit_button(); ?> // спец функция для кнопки, можно вводит разные параметры (см документацию)
+		</form>
+	</div>
+	<?php
+}
+
+/********************************
+Группа настроек большого плагина *********************************/
+Собственное меню с несколькими пунктами к настройкам, по аналогии с выпадающими меню Add page, All pages и т.д.
+Для этого используется add_menu_page();
+
+Создаем плагин (на прмере плагина настроек темы)
+
+Основной файл плагина:
+
+add_action('admin_menu', 'my_admin_menu');
+add_action('admin_init', 'admin_settings');
+
+function admin_settings()
+{
+	register_setting(
+		'theme_options_group', // id группы опций
+		'theme_options',
+		'theme_options_sanitize' // функция обработки данных
+	);
+
+	add_settings_section(
+		'theme_options_id',
+		'Секция Опции темы',
+		'',
+		'my-theme-options' // на какую страницу выводить эту секцию, slug
+	);
+	add_settings_field(
+		'theme_options_body',
+		'Цвет фона',
+		'theme_body_cb',
+		'my-theme-options',
+		'theme_options_id', // id секции, для которой поле
+		array('lable_for' => 'theme_options_body'); // добавление дополнительных параметров, добавить лэйбл к инпуту, для этого ключ lable_for
+	);
+	add_settings_field(
+		'theme_options_header',
+		'Цвет хедера',
+		'theme_header_cb',
+		'my-theme-options',
+		'theme_options_id', // id секции, для которой поле
+		array('lable_for' => 'theme_options_header');
+	);
+}
+
+function theme_body_cb()
+{
+	$options = get_option('theme_options');
+	?>
+	<input type="text" name="theme_option[theme_options_body]" id="theme_options_body" value="<?php echo esc_attr($options['theme_option_body']); ?>" class="regular-text"/>
+	<?php
+}
+
+function theme_header_cb()
+{
+	$options = get_option('theme_options');
+	?>
+	<input type="text" name="theme_option[theme_options_header]" id="theme_options_header" value="<?php echo esc_attr($options['theme_option_header']); ?>" class="regular-text"/>
+	<?php
+}
+
+function theme_options_sanitize()
+{
+	$clean_options = array();
+	foreach ($options as $key => $value) {
+		$clean_options[$key] = strip_tags($value); // очищение от тегов
+	}
+	return $clean_options;
+}
+
+function my_admin_menu()
+{
+	add_menu_page(
+		'Опции плагина настроек темы', // заголовок страницы, title
+		'Theme Settings', // название пункта меню слева, целая отдельная секция
+		'manage_options', // права доступа к странице setting
+		'my-theme-options', // слаг для url, можно здесь указать __FILE__, тогда в адресе просто будет название папки с плагином и название файла плагина
+		'my_option_page', // функция генерации элементов, полей для страницы
+		'dashicons-smiley', // иконка, если используем свою, то пишем адрес plugins_url('img/ico.png', __FILE__)
+		'3' // позиция нового пункта меню, по-умолчанию среди последних, захардкоженные позиции меню по-умолчанию расписаны в документации к add_menu_page. Внимание! Если указать уже занятую цифру, то наш пункт перезапишет старый пункт, если целые числа заняты, можно использовать дробные
+		);
+}
+
+function my_option_page()
+{
+	$options = get_option('theme_options');
+	?>
+	<div class="wrap">
+		<h2>Опции плагина</h2>
+		<p>Опции плагина настроек текущей темы</p>
+		<form action="options.php" method="post"> <!-- options.php надо указывать, чтобы данные отправлялись в обработчик wp, а не на эту же страницу, а там куча проверок и так надежнее -->
+		);
+			<?php 
+			settings_fields( 'theme_option_group' ); // добавляет скрытые поля для конкретной группы полей
+			do_settings_sections( 'my-theme-options' );
+
+			submit_button(); ?> // спец функция для кнопки, можно вводит разные параметры (см документацию)
+		</form>
+	</div>
+	<?php
+}
+
+/********************************
+Несколько скеций с полями настроек
+********************************/
+На примере все того же плагина настроек темы
+
+Остановилась disc1/AutoPlay/Lessons/Page3/урок10 02:50
+
 
 
